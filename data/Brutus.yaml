@@ -1,0 +1,57 @@
+name: Brutus
+setting: BaldaariSetting
+archetype:
+  name: Laborer
+  characteristics:
+    brawn: 3
+    agilty: 2
+    intellect: 2
+    cunning: 2
+    willpower: 1
+    presence: 2
+    wound_threshold: 12
+    strain_threshold: 8
+    experience: 100
+    starting_skills:
+      - athletics
+    tough_as_nails: 'Once per session, your character may spend a Story Point as an out-of-turn inciden- tal immediately after suffering a Critical Injury and determining the result. If they do so, they count the result rolled as “01.'
+career:
+  name: soldier
+  skills:
+    - Athletics
+    - Brawl
+    - Coercion
+    - Melee (Heavy)
+    - Perception
+    - Ranged
+    - Survival
+    - Vigilance
+player: NPC
+wound_threshold: 16
+strain_threshold: 9
+characteristics:
+  BR: 4
+  AG: 3
+  INT: 2
+  CUN: 2
+  WILL: 2
+  PR: 2
+skills:
+  Melee (Heavy): 2
+  Ranged: 1
+  Vigilance: 1
+  Perception: 1
+motivation:
+  desire:
+    name: Vengeance
+    text: "Brutus' family was killed by the Azure Syndicate, but he managed to escape. He has sworn to get revenge on those who did it"
+  fear:
+    name: Nemesis
+    text: "Brutus believes the Azure Syndicate still wants him dead, but he has changed his name to avoid them - for now"
+  strength:
+    name: Adaptable
+    text: "Brutus had to learn early in life how to fend for himself"
+  flaw:
+    name: Anger
+    text: "Brutus is easily angered, especially when things don't go the way he expects"
+
