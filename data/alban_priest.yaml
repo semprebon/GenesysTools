@@ -1,0 +1,37 @@
+name: Sharaf el-Basha
+setting: BadaarSetting
+archetype: Leader
+career: Alban Priest
+player: Example
+wound_threshold: 16
+strain_threshold: 9
+characteristics:
+  BR: 3
+  AG: 1
+  INT: 2
+  CUN: 2
+  WILL: 4
+  PR: 3
+skills:
+  Coercion: 2
+  Discipline: 1
+  Melee (Light): 1
+  Sorcery: 1
+motivation:
+  desire:
+    name: Justice
+    text: "Sharif follows a sect of Albanism that promotes equal rights and justice for all."
+  fear:
+    name: Obscurity
+    text: "Sharif wants to be remembered for his struggle on behalf of the down-trodden."
+  strength:
+    name: Witty
+    text: "Sharif's idealism is tempered by his genial humor."
+  flaw:
+    name: Anger
+    text: "Sharif has little patience for those who stand in the way of his objective."
+equipment:
+  - Holy Icon
+  - Priests Vestments
+  - Mace
+silver: 150

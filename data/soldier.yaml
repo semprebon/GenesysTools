@@ -1,0 +1,39 @@
+name: Saadeer Fidaal
+setting: BaldaariSetting
+archetype: Laborer
+career: Soldier
+player: Example
+wound_threshold: 16
+strain_threshold: 11
+characteristics:
+  BR: 4
+  AG: 3
+  INT: 2
+  CUN: 2
+  WILL: 3
+  PR: 2
+skills:
+  Athletics: 1
+  Melee (Heavy): 2
+  Ranged: 1
+  Vigilance: 1
+motivation:
+  desire:
+    name: Ambition
+    text: "Saadeer is tired of being bossed around, and hopes to leverage his adventuring accomplishments to start his
+    own mercenary company"
+  fear:
+    name: Change
+    text: "Saadeer likes the stability of tradition, and gets annoyed at those who push for cultural change."
+  strength:
+    name: Courageous
+    text: "Saadeer has a fatalistic view of life, which allows him to face dangers others mught wisely avoid."
+  flaw:
+    name: Laziness
+    text: "While leaping at the chance to fight, Saadeer is much less enthusiastic about getting up to do anything else."
+equipment:
+  - Leather Armor
+  - Sword
+  - Shield
+  - Travel Kit
+silver: 90

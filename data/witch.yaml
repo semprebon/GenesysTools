@@ -1,0 +1,41 @@
+name: Witha
+setting: BaldaariSetting
+archetype: Nomad
+career: Witch
+player: Example
+wound_threshold: 16
+strain_threshold: 9
+characteristics:
+  BR: 2
+  AG: 2
+  INT: 3
+  CUN: 4
+  WILL: 2
+  PR: 2
+skills:
+  Alchemy: 1
+  Medicine: 1
+  Perception: 1
+  Survival: 1
+  Witchcraft: 2
+motivation:
+  desire:
+    name: Knowledge
+    text: "Witha is trying to find out as much as possible about her brother's mysterious death. All she knows is that
+    Mazul was working for the Azure Syndicate"
+  fear:
+    name: Isolation
+    text: "Her parents died when she was young, and her brother and her had to fend for themselves from an early age.
+    In a society where wealth is often connected to family, its tough getting by without one."
+  strength:
+    name: Independent
+    text: "Witha has learned to fend for herself."
+  flaw:
+    name: Ignorance
+    text: "Witha did not grow up in the city, or in the Alban faith, and this often leaves her deficient in knowledge
+    of the culture"
+equipment:
+  - Magic Atheme
+  - Heavy Robes
+  - Apothecary Kit
+silver: 55

@@ -1,0 +1,36 @@
+name: Ali el Wizadi
+setting: BaldaariSetting
+archetype: Scholar
+career: Academy Wizard
+player: Example
+wound_threshold: 16
+strain_threshold: 9
+characteristics:
+  BR: 2
+  AG: 2
+  INT: 4
+  CUN: 2
+  WILL: 3
+  PR: 2
+skills:
+  Alchemy: 1
+  Knowledge (Lore): 2
+  Negotiation: 1
+  Thaumaturgy: 2
+motivation:
+  desire:
+    name: Expretise
+    text: "Ali is obsessed with learning all he can about magic"
+  fear:
+    name: Death
+    text: "As a young apprentice, Ali nearly died in a spell mishap."
+  strength:
+    name: Patient
+    text: "Ali takes the time to do things right."
+  flaw:
+    name: Compulsion
+    text: "Ali's obsession leads him to spend long hours into the night reading. He has a hard time not at least flipping through a nearby book or scroll""
+equipment:
+  - Magic Staff
+  - Heavy Robes
+silver: 55

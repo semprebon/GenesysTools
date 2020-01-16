@@ -1,0 +1,41 @@
+name: Sewaaj al-Bukaar
+setting: BaldaariSetting
+archetype: Artisan
+career: Swashbuckler
+player: Example
+wound_threshold: 10+
+strain_threshold: 10+
+characteristics:
+  BR: 2
+  AG: 4
+  INT: 2
+  CUN: 3
+  WILL: 2
+  PR: 2
+skills:
+  Coordination: 2
+  Melee (Light): 1
+  Resilience: 1
+  Skulduggery: 1
+  Stealth: 1
+talents:
+  - Finesse
+motivation:
+  desire:
+    name: Vengeance
+    text: "A noble, Kamaal el-Faaleman has impovrished Sewaaj's family by slandering his father and getting him expelled
+    from the metalworkers guild."
+  fear:
+    name: Nemesis
+    text: "Kemaal el-Faaleman is determined to end Saadeer's annoying antics."
+  strength:
+    name: Adaptable
+    text: "Sewaaj rarely plans, but instead relies on making spur-of-the-moment decsions"
+  flaw:
+    name: Recklessness
+    text: "Because he rarely bothers to plan his actions, they often have unintended consequences."
+equipment:
+  - Leather Armor
+  - Sword
+  - Travel Kit
+silver: 100

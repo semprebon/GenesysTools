@@ -1,0 +1,33 @@
+- name: Magic Athame
+  type: implement/weapon
+  encumbrance: 1
+  rarity: 4
+  description: "A ceremonial dagger used for magical rituals and casting."
+  implement:
+    effect: "Any attack spell that uses an athame as an implement adds the close combat effect without increasing the
+      difficulty of the check. In addition, an attack spell cast at a target engaged with the user increases its base damage by two."
+  weapon:
+    skill: Melee (Light)
+    damage: +2
+    crit: 3
+    range: Enganged
+    special:
+  mp: 1
+- name: Magic Staff
+  type: implement/weapon
+  encumbrance: 2
+  rarity: 6
+  description: "A short staff."
+  implement:
+    effect: "When your character casts a spell while using a magic staff, the first Range effect added to the spell does
+    not increase the spell’s difficulty. In addition, Attack spells cast by your character increase their base damage by
+    four."
+  weapon:
+    skill: Melee (Heavy)
+    damage: +3
+    crit: 4
+    range: Enganged
+    special:
+  mp: 1
+
+

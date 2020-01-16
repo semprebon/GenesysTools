@@ -1,0 +1,41 @@
+name: Ruhaal el-Hoolaam
+setting: BaldaariSetting
+archetype: Artisan
+career: Rogue
+player: Example
+wound_threshold: 10+
+strain_threshold: 10+
+characteristics:
+  BR: 3
+  AG: 4
+  INT: 2
+  CUN: 3
+  WILL: 2
+  PR: 1
+skills:
+  Coordination: 2
+  Ranged: 1
+  Skulduggery: 1
+  Stealth: 1
+motivation:
+  desire:
+    name: Wealth
+    text: "Ruhaal is obsessed with gaining the trappings of wealth."
+  fear:
+    name: Humiliation
+    text: "Ruhaal is concerned about how he is seen by others, and sometimes takes rash actions to avoid being humiliated."
+  strength:
+    name: Analytical
+    text: "He may not be the smartest guy in the room, but Ruhaal is still good at following the evidence and figuring
+    things out"
+  flaw:
+    name: Greed
+    text: "Ruhaal's expenses always seem to exceed his income. Whatever windfall comes his way slips easily through his
+    fingers."
+equipment:
+  - Leather Armor
+  - Cestus
+  - Dagger
+  - Theives Tools
+  - Travel Kit
+silver: 100
