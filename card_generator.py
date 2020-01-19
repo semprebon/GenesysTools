@@ -205,86 +205,33 @@ class CardPageTemplate(PageTemplate):
 
         return (gutter, (page_extent - (2*card_extent + gutter)) / 2)
 
+    # compute the number of items that fit into a given extent, and the offset
+    def fit_cards(page_extent, card_extent, gutter):
+        gutter = 0 if gutter is None else gutter
+        count = math.floor((page_extent-gutter) / (card_extent+gutter));
+        initial_offset = (page_extent - count * (card_extent + gutter) + gutter) / 2;
+        return count
 
-class SingleCardPage(CardPageTemplate):
-    CARDS_PER_PAGE = 1
-
-    def __init__(self, card, gutter_width=None, gutter_height=None):
-        super().__init__(self, card.card_width, card.card_height, gutter_width, gutter_height)
-
-        self.card = card
-        self.card_offset_x, self.card_offset_y = (self.PAGE_MARGIN_X, self.PAGE_HEIGHT - (self.PAGE_MARGIN_Y + card.CARD_HEIGHT))
-        self.content_offset_x, self.content_offset_y = (self.card_offset_x + card.CARD_MARGIN, self.card_offset_y + card.CARD_MARGIN)
-        self.bleed = 0.15 * inch
-        self.back_offset = self.card_offset_x + card.CARD_WIDTH + self.gutter_width
-        mainFrame = Frame(self.content_offset_x, self.content_offset_y, card.CONTENT_WIDTH, card.CONTENT_HEIGHT,
-                          leftPadding=card.CONTENT_MARGIN, rightPadding=card.CONTENT_MARGIN,
-                          topPadding=card.CONTENT_MARGIN, bottomPadding=card.CONTENT_MARGIN,
-                          showBoundary=False, id="main")
-        sidebarFrame = Frame(self.content_offset_x, self.content_offset_y, card.CONTENT_WIDTH, card.CONTENT_HEIGHT,
-                             showBoundary=False, id="sidebar")
-        pictureFrame = Frame(self.back_offset + card.CARD_MARGIN, self.content_offset_y,
-                             card.CONTENT_WIDTH, card.CONTENT_HEIGHT, showBoundary=False, id="pictureFrame")
-
-        PageTemplate.__init__(self, id="cardFront", frames=[mainFrame, sidebarFrame, pictureFrame],
-                     onPage=lambda can, doc: self.draw_background(can, card.FRONT_BACKGROUND_IMAGE))
-
-    def draw_crop_marks(self, canvas, x, y, width, height):
-        self.draw_corner_crop_marks(canvas, x, y, (-1,-1))
-        self.draw_corner_crop_marks(canvas, x+width, y, (1,-1))
-        self.draw_corner_crop_marks(canvas, x, y+height, (-1,1))
-        self.draw_corner_crop_marks(canvas, x+width, y+height, (1,1))
-
-    def draw_corner_crop_marks(self, canvas, x, y, direction):
-        offset = 0
-        length = 0.2 * inch
-        # vertical line (x constant)
-        canvas.line(x, y + offset * direction[1],
-                    x, y + (offset + length) * direction[1])
-        # horizontal
-        canvas.line(x + offset * direction[0], y,
-                    x + (offset + length) * direction[0], y)
-
-    def draw_background(self, canvas, imagePath):
-
-        canvas.saveState()
-
-        self.draw_card_front(canvas, imagePath)
-
-        canvas.setStrokeColorRGB(0,0,1)
-        canvas.setLineWidth(0.1)
-        self.draw_crop_marks(canvas, self.card_offset_x, self.card_offset_y, self.card.CARD_WIDTH, self.card.CARD_HEIGHT)
-        self.draw_crop_marks(canvas, self.back_offset, self.card_offset_y, self.card.CARD_WIDTH, self.card.CARD_HEIGHT)
-
-        if self.gutter_width > 0:
-            canvas.setDash(6, 2)
-            canvas.line(self.back_offset-self.gutter_width/2,0,self.back_offset-self.gutter_width/2,self.PAGE_HEIGHT)
-
-        canvas.restoreState()
-
-    def draw_card_front(self, canvas, imagePath):
-        canvas.drawImage(imagePath, self.card_offset_x-self.bleed, self.card_offset_y-self.bleed, width=self.card.CARD_WIDTH + 2*self.bleed,
-                         height=self.card.CARD_HEIGHT + 2*self.bleed)
-        canvas.setFillColor(Color(100, 100, 100, alpha=0.7))
-        canvas.rect(self.content_offset_x - self.card.CONTENT_MARGIN, self.content_offset_y + self.card.CONTENT_MARGIN,
-                    self.card.CONTENT_WIDTH + 2 * self.card.CONTENT_MARGIN,
-                    self.card.CONTENT_HEIGHT + 2 * card.CONTENT_MARGIN,
-                    stroke=False, fill=True)
-
-class DoubleCardPage(CardPageTemplate):
-    CARDS_PER_PAGE = 4
+# Generates multiple cards per page. Card front and backs printed on single side of paper such
+# That paper can be folded along vertical center line to lineup backs and fronts
+class MultiCardPageSingleSide(CardPageTemplate):
 
     def __init__(self, card, gutter_width=None, gutter_height=None):
-        CardPageTemplate.__init__(self, card.CARD_WIDTH, card.CARD_HEIGHT, gutter_width=gutter_width, gutter_height=gutter_height)
-        self.card = card
 
-        self.card_offset_x, self.card_offset_y = (self.PAGE_MARGIN_X, self.PAGE_HEIGHT - (self.PAGE_MARGIN_Y + card.CARD_HEIGHT))
+        CardPageTemplate.__init__(self, card.CARD_WIDTH, card.CARD_HEIGHT,
+                                  gutter_width=gutter_width, gutter_height=gutter_height)
+
+        self.card = card
+        (self.y_offset, self.CARDS_PER_PAGE) = self.fit_cards(self.PAGE_HEIGHT, self.card.CARD_HEIGHT, gutter_height)
+
+        self.card_offset_x, self.card_offset_y = (self.PAGE_MARGIN_X, self.PAGE_HEIGHT
+                                                  - (self.PAGE_MARGIN_Y + card.CARD_HEIGHT))
         self.content_offset_x, self.content_offset_y = (self.card_offset_x + card.CARD_MARGIN, self.card_offset_y + card.CARD_MARGIN)
         self.bleed = 0.1 * inch
         self.back_offset = self.card_offset_x + card.CARD_WIDTH + self.gutter_width
 
         frames = []
-        for card_idx in [0,1]:
+        for card_idx in range(0, self.CARDS_PER_PAGE):
             content_offset_y = self.card_offset_y + card.CARD_MARGIN - card_idx * (card.CARD_HEIGHT + self.gutter_height)
             suffix = str(card_idx)
             frames.extend(card.create_card_front_frames(self.content_offset_x, content_offset_y, suffix))
@@ -293,6 +240,11 @@ class DoubleCardPage(CardPageTemplate):
         PageTemplate.__init__(self, id="cardFront", frames=frames,
                      onPage=lambda can, doc: self.draw_background(can, card.FRONT_BACKGROUND_IMAGE))
 
+    # returns the offset and extent of card n (starting with n=0)
+    def card_offset(self, n, front_side=True):
+        x_offset = self.page_center_x - self.card.CARD_WIDTH - self.gutter_width/2
+        y_offset = self.y_initial_offset + n * (self.card.CARD_HEIGHT + self.gutter_height)
+        return (x_offset, y_offset)
 
     def draw_crop_marks(self, canvas, x, y, width, height):
         self.draw_corner_crop_marks(canvas, x, y, (-1,-1))
@@ -349,10 +301,12 @@ class DoubleCardPage(CardPageTemplate):
 class PDFGenerator:
     # Generates the PDF by applying data to the page layout and card layout
 
-    def generate(self, output, data_file, name, page_template_class=DoubleCardPage, card=Card):
+    def generate(self, output, data_file, name, page_template_class=MultiCardPageSingleSide, card=Card):
         card = Card()
         card.register_fonts()
-        page_template_class = DoubleCardPage
+        page_template_class = MultiCardPageSingleSide
+        cards_per_page = MultiCardPageSingleSide.fit_cards(page_template_class.PAGE_HEIGHT, card_extent=card.CARD_HEIGHT,
+                                                           gutter=0)
 
         margin = page_template_class.PAGE_MIN_MARGIN + card.CONTENT_MARGIN
         doc = BaseDocTemplate(output, pagesize=letter, rightMargin=margin, leftMargin=margin,
@@ -363,7 +317,7 @@ class PDFGenerator:
 
         data = self.load_data(data_file, filter)
         #data = self.arrange_images(data)
-        for batch in batch_list(data, page_template_class.CARDS_PER_PAGE):
+        for batch in batch_list(data, cards_per_page):
             print("page includes ", [item.get("name") for item in batch])
             page = page_template_class(card, gutter_width=None, gutter_height=0.2 * inch)
             doc.addPageTemplates([page])
