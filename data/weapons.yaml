@@ -1,0 +1,77 @@
+- name: Mace
+  type: weapon
+  encumbrance: 2
+  rarity: 1
+  mp: 1
+  weapon:
+    skill: Melee (Light)
+    damage: +3
+    crit: 4
+    range: Enganged
+    special:
+- name: Sword
+  type: weapon
+  encumbrance: 1
+  rarity: 2
+  mp: 1
+  weapon:
+    skill: Melee (Light)
+    damage: +3
+    crit: 2
+    range: Enganged
+    special: Defensive 1
+- name: Shield
+  type: weapon
+  encumbrance: 1
+  rarity: 1
+  mp: 1
+  weapon:
+    skill: Melee (Light)
+    damage: +0
+    crit: 6
+    range: Enganged
+    special: Defensive 1, Deflection 1, Inaccurate 1, Knockdown
+- name: Rapier
+  type: weapon
+  encumbrance: 1
+  rarity: 3
+  mp: 1
+  weapon:
+    skill: Melee (Light)
+    damage: +3
+    crit: 2
+    range: Enganged
+    special: Defensive 2
+- name: Flintlock Pistol
+  type: weapon
+  encumbrance: 2
+  rarity: 5
+  mp: 1
+  weapon:
+    skill: Ranged
+    damage: +5
+    crit: 5
+    range: Short
+    special: Prepare 1, Limited Ammo 1
+- name: Cestus
+  type: weapon
+  encumbrance: 1
+  rarity: 1
+  mp: 0
+  weapon:
+    skill: Brawl
+    damage: +1
+    crit: 4
+    range: Enganged
+    special: Disorient 3
+- name: Dagger
+  type: weapon
+  encumbrance: 1
+  rarity: 1
+  mp: 1
+  weapon:
+    skill: Melee (Light)
+    damage: +2
+    crit: 3
+    range: Enganged
+    special: Accurate 1

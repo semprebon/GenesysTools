@@ -38,6 +38,8 @@ class CharacterSheet:
     SECTION_HEADER_STYLE = ParagraphStyle("section_header", fontName="Helvetica", fontSize=9, leading=9, alignment=TA_CENTER)
     SIDEBAR_STYLE = ParagraphStyle("normal", fontName="Times-Roman", fontSize=9, leading=11, alignment=TA_RIGHT)
     SIDEBAR_TITLE_STYLE = ParagraphStyle("normal", fontName="Times-Roman", fontSize=9, leading=13, alignment=TA_RIGHT)
+    SKILL_STYLE = ParagraphStyle("normal", fontName="Times-Roman", fontSize=9, leading=10)
+
     GENESYS_SYMBOLS_STYLE = ParagraphStyle("normal", fontName="Genesys", fontSize=9, leading=13, alignment=TA_RIGHT)
 
     ATTRIBUTE_CODES = { "AG": "Agility", "BR": "Brawn", "CUN": "Cunning",

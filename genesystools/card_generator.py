@@ -18,8 +18,6 @@ def format_modifier(value):
 def attribute_modifier(value):
     return math.floor((value-10)/2)
 
-def humanize(s):
-    return s.replace("_", " ").title()
 
 def batch_list(list, batch_size):
     return [ list[i:i + batch_size] for i in range(0, len(list), batch_size) ]

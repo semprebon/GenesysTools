@@ -1,0 +1,86 @@
+- name: Brigadine
+  type: armor
+  encumbrance: 2
+  armor:
+    defense: 1
+    soak: +1
+  mp: 1
+  price: 400
+  rarity: 5
+#- name: Chaimmail
+#  type: armor
+#  armor:
+#    defense: 0
+#    soak: +2
+#  encumbrance: 3
+#  mp: 2
+#  price: 550
+#  rarity: 4
+- name: Heavy Robes
+  type: armor
+  armor:
+    defense: 1
+    soak: 0
+  encumbrance: 1
+  mp: 1
+  price: 45
+  rarity: 0
+- name: Leather Armor
+  type: armor
+  armor:
+    defense: 0
+    soak: +1
+  encumbrance: 2
+  mp: 1
+  price: 50
+  rarity: 3
+- name: Heavy Robes
+  type: armor
+  armor:
+    defense: 1
+    soak: 0
+  encumbrance: 1
+  mp: 1
+  price: 45
+  rarity: 0
+- name: Leather Armor
+  type: armor
+  armor:
+    defense: 0
+    soak: +1
+  encumbrance: 2
+  mp: 1
+  price: 50
+  rarity: 3
+- name: Padded Armor
+  type: armor
+  armor:
+    defense: 0
+    soak: +1
+  encumbrance: 2
+  mp: 0
+  price: 35
+  rarity: 2
+#- name: Plate Armor
+#  type: armor
+#  armor:
+#    defense: 1
+#    soak: +2
+#  encumbrance: 4
+#  mp: 2
+#  price: 1000
+#  rarity: 6
+#- name: Scale Armor
+#  type: armor
+#  armor:
+#    defense: 0
+#    soak: +2
+#  encumbrance: 4
+#  mp: 1
+#  price: 410
+#  rarity: 4
+
+
+
+
+

@@ -1,3 +1,22 @@
+- name: Holy Icon
+  type: implement
+  encumbrance: 0
+  rarity: 4
+  price: 250
+  description: "A religious symbol in the form of a necklace, ring, emblem, or medallion."
+  implement:
+    effect: "When Conjuring the divine servant bound to the icon, you get the Summoned Ally effect free and the creature
+    remains summoned until the end of the encounter without concentration."
+
+- name: Magic Orb
+  type: implement
+  encumbrance: 1
+  rarity: 6
+  price: 1000
+  description: "An orb roughly the size of a fist carved from glass or gemstone."
+  implement:
+    effect: "Add first  Additional Target or Additional Summons effect for free. Attack spell gets +3 to base damage."
+
 - name: Magic Athame
   type: implement/weapon
   encumbrance: 1
@@ -12,7 +31,6 @@
     crit: 3
     range: Enganged
     special:
-  mp: 1
 - name: Magic Staff
   type: implement/weapon
   encumbrance: 2
@@ -28,6 +46,41 @@
     crit: 4
     range: Enganged
     special:
-  mp: 1
+- name: Wand of Fire
+  type: implement
+  encumbrance: 1
+  rarity: 5
+  price: 400
+  description: "A small stick, usually made of wood or bone"
+  implement:
+    effect: "Attack spells increase their base damage by 3, and add the Burn quality at a rating equal to the
+      character's ranks in the associated knowledge skill."
+- name: Wand of Wounding
+  type: implement
+  encumbrance: 1
+  rarity: 5
+  price: 400
+  description: "A small stick, usually made of wood or bone"
+  implement:
+    effect: "Attack spells increase their base damage by +3, gain a Critical rating of 2, and gain the Vicious quality
+      at a rating equal to the character's ranks in the associated knowledge skill."
+- name: Wand of Ice
+  type: implement
+  encumbrance: 1
+  rarity: 5
+  price: 400
+  description: "A small stick, usually made of wood or bone"
+  implement:
+    effect: "Attack spells increase their base damage by 3, and add the Ensnare quality at a rating equal to the
+      character's ranks in the associated knowledge skill."
+- name: Wand of Lightning
+  type: implement
+  encumbrance: 1
+  rarity: 5
+  price: 400
+  description: "A small stick, usually made of wood or bone"
+  implement:
+    effect: "Attack spells increase their base damage by 3, add the Stun quaility at a rating equal to the character's
+      ranks in the associated knowledge skill, and add the Auto-Fire quality."
 
 

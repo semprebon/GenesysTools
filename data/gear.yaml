@@ -1,0 +1,42 @@
+- name: Alchemist's Kit
+  type: gear
+  encumbrance: 3
+  rarity: 5
+  price: 300
+  description: "Portable kit of devices providing the minimal needs for crafting alchemical concoctions. Allows you to
+    craft using the Alchemist skill without penalty."
+- name: Apothecary's Kit
+  type: gear
+  encumbrance: 2
+  rarity: 4
+  price: 150
+  description: "Portable kit of herbs, bandages, knives, etc for treating injuries and sickness. Allows you to use the
+   Medicine skill to heal, as well as craft herbal salves and potions, without penalty"
+- name: Climbing Gear
+  type: gear
+  encumbrance: 2
+  rarity: 4
+  price: 150
+  description: "Portable kit of herbs, bandages, knives, etc for treating injuries and sickness. Allows you to use the
+   Medicine skill to heal, as well as craft herbal salves and potions, without penalty"
+- name: Extra Quiver
+  type: gear
+  encumbrance: 2
+  rarity: 4
+  price: 150
+  description: "Portable kit of herbs, bandages, knives, etc for treating injuries and sickness. Allows you to use the
+   Medicine skill to heal, as well as craft herbal salves and potions, without penalty"
+- name: Fine Coat
+  type: gear
+  encumbrance: 2
+  rarity: 4
+  price: 150
+  description: "Portable kit of herbs, bandages, knives, etc for treating injuries and sickness. Allows you to use the
+   Medicine skill to heal, as well as craft herbal salves and potions, without penalty"
+- name: Prists Vestments
+  type: gear
+  encumbrance: 1
+  rarity: 3
+  price: 60
+  description: "Portable kit of herbs, bandages, knives, etc for treating injuries and sickness. Allows you to use the
+   Medicine skill to heal, as well as craft herbal salves and potions, without penalty"
