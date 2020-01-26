@@ -1,0 +1,35 @@
+# Angel of Retribution
+- name: Sweeper Guard
+  type: Minion
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 2
+    CUN: 2
+    WILL: 2
+    PR: 1
+  soak_value: 3
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 20
+  skills:
+    Athletics:
+    Brawl:
+    Discipline:
+    Melee (Heavy):
+  actions:
+    - name: Glave
+      type: weapon
+      damage: 3
+      critical: 3
+      range: Engaged
+      qualities:
+        - Defensive 1
+        - Pierce 3
+  equipment:
+    - name: Leather Armor
+
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1

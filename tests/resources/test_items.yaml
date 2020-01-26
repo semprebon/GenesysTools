@@ -1,0 +1,4 @@
+- name: Rock
+  description: "A rock."
+- name: Stick
+  description: "A stick."

@@ -8,7 +8,7 @@ class CardPageLayout:
     PAGE_MIN_MARGIN =  0.16 * inch
 
     def __init__(self, card_size, page_size=[8.5*inch, 11*inch], gutter=0,
-                 page_margin=PAGE_MIN_MARGIN, card_margin=0.25*inch):
+                 page_margin=PAGE_MIN_MARGIN, card_margin=0.15*inch):
         self.card_size = card_size
         self.page_size = page_size
         self.gutter = self.to_extents(gutter)

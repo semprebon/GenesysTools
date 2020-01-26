@@ -1,0 +1,35 @@
+- name: Undead Skeleton
+  type: minion
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 2
+  wound_threshold: 4
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    - Perception
+    - Ranged
+    - Melee (Light)
+    - Vigilance
+  equipment:
+    - name: Rusty Blade
+      type: weapon
+      skill: Melee/Light
+      damage: 5
+      critical: 4
+      range: Engaged
+    - name: Old Bow
+      type: weapon
+      skill: Ranged
+      damage: 6
+      critical: 3
+      range: Medium
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1

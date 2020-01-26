@@ -1,0 +1,71 @@
+name: Zeloq Haalam
+setting: BadaarSetting
+type: nemesis
+archetype: Leader
+career: Inquisitor
+player: NPC
+faction: Inquisition
+wound_threshold: 15
+strain_threshold: 19
+soak_value: 4
+characteristics:
+  BR: 3
+  AG: 2
+  INT: 3
+  CUN: 2
+  WILL: 4
+  PR: 3
+skills:
+  Charm: 2
+  Coercion: 4
+  Discipline: 3
+  Knowledge (Badaar): 2
+  Leadership: 2
+  Melee (Light): 3
+  Perception: 3
+  Sorcery: 4
+  Streetwise: 3
+  Vigilance: 3
+  Cool: 1
+talents:
+  - Adversary 1
+  - Coercive Sorcery
+actions:
+  - name: Spirit Guardians
+    type: spell
+    skill: Sorcery
+    pool: "[PR][PR][PR][PR][DI][DI][DI]"
+    range: encounter
+    effect: "Summon 3 allied Angels of Retribution, which stay until the end
+            of the encounter."
+  - name: Concussive Bolt
+    type: Attack
+    skill: Sorcery
+    pool: "[PR][PR][PR][PR][DI][DI]"
+    range: short
+    qualities:
+      - Stun Damage
+      - Knockdown
+      - Disorient 4
+motivation:
+  desire:
+    name: Justice
+    text: "Only the law keeps the city from destroying itself in chaos."
+  fear:
+    name: Nemesis
+    text: "Riyad al-Teer, a corrupt priest with family connections to the
+          el-Siqs, has thwarted Zeloq a number of times to save priviledged
+          individuals from the law."
+  strength:
+    name: Analytical
+    text: "Zeloq follows the evidence to whatever conclusion it leads him to,
+          regardless of the consequences."
+  flaw:
+    name: Pride
+    text: "Zeloq has a low opinion of the intelligence of others."
+equipment:
+  - Holy Icon
+  - Priests Vestments
+  - Sword
+  - Brigadine Armor
+silver: 150

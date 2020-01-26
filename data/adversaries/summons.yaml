@@ -1,0 +1,335 @@
+# Witchcraft Summonings
+
+#Skeleton
+- name: Undead Skeleton
+  type: minion
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 2
+  wound_threshold: 4
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    - Perception
+    - Ranged
+    - Melee (Light)
+    - Vigilance
+  equipment:
+    - name: Rusty Blade
+      type: weapon
+      skill: Melee/Light
+      damage: 5
+      critical: 4
+      range: Engaged
+    - name: Old Bow
+      type: weapon
+      skill: Ranged
+      damage: 6
+      critical: 3
+      range: Medium
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1
+
+# Falcon
+- name: Falcon
+  type: rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 4
+  melee_defense: 0
+  ranged_defense: 1
+  skills:
+    Athletics: 2
+    Brawl: 2
+    Perception: 3
+    Vigilance: 3
+  abilities:
+    "Flyer": ""
+  equipment:
+    - name: "Beak & Claw"
+      type: weapon
+      skill: Brawl
+      damage: 3
+      critical: 3
+      range: Engaged
+      qualities:
+        - Vicious 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Dog
+- name: Dog
+  type: rival
+  characteristics:
+    BR: 2
+    AG: 3
+    INT: 1
+    CUN: 3
+    WILL: 2
+    PR: 2
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics: 1
+    Brawl: 1
+    Charm: 1
+    Perception: 1
+    Survival: 1
+    Vigilance: 2
+  abilities:
+    "Pack Fighter": "On successful combat check, next ally making a combat check on the same foe adds [AD][AD]."
+  equipment:
+    - name: "Bite"
+      type: weapon
+      skill: Brawl
+      damage: 4
+      critical: 3
+      range: Engaged
+      qualities:
+        - Kockdown
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Wolf
+- name: Wolf
+  type: minion
+  characteristics:
+    BR: 2
+    AG: 3
+    INT: 1
+    CUN: 3
+    WILL: 2
+    PR: 1
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics:
+    Brawl:
+    Coercion:
+    Survival:
+  abilities:
+    "Pack Fighter": "When more than one, can spend Manvuever to prevent disengage and add [AD][AD] to next combat check
+    against them"
+  equipment:
+    - name: "Bite"
+      type: weapon
+      skill: Brawl
+      damage: 5
+      critical: 3
+      range: Engaged
+      qualities:
+        - Kockdown
+        - Vicious 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Sorcery Summonings
+# Imp
+- name: Vengeful Imp
+  type: rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 2
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 9
+  melee_defense: 1
+  ranged_defense: 1
+  ablilities:
+    - name: 'Flyer'
+      description: "Flies"
+    - name: Shapeshifter
+      description: "Once per round as an incidental, an imp may change
+                    its appearance to that of any creature of silhouette 0."
+  talents:
+    - Quick Draw
+  skills:
+    Ranged: 3
+    Stealth: 3
+    Vigilance: 3
+  equipment:
+    - name: Small Rock
+      type: weapon
+      skill: Ranged
+      damage: +1
+      critical: 5
+      range: short
+    - name: Tooth and Claw
+      type: weapon
+      skill: Brawl
+      damage: +2
+      critical: 3
+      range: engaged
+      qualities:
+        - Vicious 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Angel of Healing
+- name: Angel of Mercy
+  type: Minion
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 1
+    CUN: 3
+    WILL: 2
+    PR: 1
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 1
+  ranged_defense: 2
+  ablilities:
+    - name: Ghostly
+      description: "Ignores terrain, doors walls. ½ damage before soak from nom-magical weapons."
+    - name: Heal
+      description: "Make Easy Witchcraft check on engaged creature to heal 1 wound per [SU], 1 strain per [AD]."
+  skills:
+    Witchcraft: 2
+    Medicine: 1
+    Vigilance: 2
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Angel of Retribution
+- name: Angel of Retribution
+  type: Minion
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 1
+    CUN: 3
+    WILL: 2
+    PR: 1
+  soak_value: 3
+  wound_threshold: 5
+  melee_defense: 1
+  ranged_defense: 2
+  ablilities:
+    - name: Ghostly
+      description: "Ignores terrain, doors walls. ½ damage before soak from nom-magical weapons."
+  skills:
+    Witchcraft: 2
+    Medicine: 1
+  actions:
+    - name: Curse of Confusion
+      type: spell
+      skill: Sorcery
+      pool: "[PR][PR][AB][DI][DI][DI]"
+      range: short
+      effect: "Reduce targets next skill check by 1 [AB]"
+  equipment:
+    - name: "Festering Wound"
+      type: weapon
+      skill: Brawl
+      damage: 5
+      critical: 3
+      range: Engaged
+      qualities:
+        - Kockdown
+        - Vicious 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Thaumaturg Summonings
+# Angel of Healing
+- name: Flame Spirit
+  type: Minion
+  characteristics:
+    BR: 2
+    AG: 3
+    INT: 1
+    CUN: 1
+    WILL: 2
+    PR: 1
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 1
+  ranged_defense: 2
+  ablilities:
+    - name: Inconspicuous
+      description: "Hard Perception/Vigilance check to spot when in its element"
+  skills:
+    Brawl:
+    Cool:
+    Stealth:
+    Vigilance:
+  equipment:
+    - name: "Psuedopod"
+      type: weapon
+      skill: Brawl
+      damage: 3
+      critical: 5
+      range: Engaged
+      qualities:
+        - Burn 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Sand Spirit
+  type: Minion
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 1
+    CUN: 1
+    WILL: 2
+    PR: 1
+  soak_value: 3
+  wound_threshold: 5
+  melee_defense: 2
+  ranged_defense: 2
+  ablilities:
+    - name: Inconspicuous
+      description: "Hard Perception/Vigilance check to spot when in its element"
+  skills:
+    Brawl:
+    Cool:
+    Stealth:
+    Vigilance:
+  equipment:
+    - name: "Psuedopod"
+      type: weapon
+      skill: Brawl
+      damage: 3
+      critical: 5
+      range: Engaged
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+

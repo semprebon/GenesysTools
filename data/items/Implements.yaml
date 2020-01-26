@@ -31,6 +31,7 @@
     crit: 3
     range: Enganged
     special:
+
 - name: Magic Staff
   type: implement/weapon
   encumbrance: 2
@@ -46,6 +47,7 @@
     crit: 4
     range: Enganged
     special:
+
 - name: Wand of Fire
   type: implement
   encumbrance: 1
@@ -55,6 +57,7 @@
   implement:
     effect: "Attack spells increase their base damage by 3, and add the Burn quality at a rating equal to the
       character's ranks in the associated knowledge skill."
+
 - name: Wand of Wounding
   type: implement
   encumbrance: 1
@@ -64,6 +67,7 @@
   implement:
     effect: "Attack spells increase their base damage by +3, gain a Critical rating of 2, and gain the Vicious quality
       at a rating equal to the character's ranks in the associated knowledge skill."
+
 - name: Wand of Ice
   type: implement
   encumbrance: 1
@@ -73,6 +77,7 @@
   implement:
     effect: "Attack spells increase their base damage by 3, and add the Ensnare quality at a rating equal to the
       character's ranks in the associated knowledge skill."
+
 - name: Wand of Lightning
   type: implement
   encumbrance: 1

@@ -1,0 +1,143 @@
+- name: Sora
+  setting: BaldaarSetting
+  archetype: Schemer
+  career: Witch
+  player: Jeff
+  wound_threshold: 12
+  strain_threshold: 12
+  melee_defense: 1
+  ranged_defense: 1
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 2
+    CUN: 4
+    WILL: 2
+    PR: 2
+  skills:
+    Witchcraft: 1
+    Perception: 1
+    Skulduggery: 1
+    Streetwise: 1
+    Resiliance: 1
+    Deception: 1
+    Medicine: 1
+    Discipline: 1
+  motivation:
+    desire:
+      name: Freedom
+      text: "she wants to always be free to choose her actions and will act
+            against anything that could jeopardize that freedom."
+    fear:
+      name: Imprisonment
+      text: "She is deathly afraid of being imprisoned again."
+    strength:
+      name: Independent
+      text: "Sora is confident in her ability to take on challenges herself."
+    flaw:
+      name: Pride
+      text: "Sora’s self confidence leaves her short sighted to seeking the
+          help of others."
+  talents:
+    - Second Wind
+  equipment:
+    - Magic Atheme
+    - Heavy Robes
+    - Apothecary Kit
+  silver: 55
+
+- name: Diwan el-Kabir
+  setting: BaldaarSetting
+  archetype: Socialite
+  career: Cult Priest
+  player: Andy
+  wound_threshold: 10
+  strain_threshold: 15
+  melee_defense: 1
+  ranged_defense: 1
+  characteristics:
+    BR: 2
+    AG: 1
+    INT: 2
+    CUN: 3
+    WILL: 3
+    PR: 4
+  skills:
+    Charm: 2
+    Melee (Light): 1
+    Discipline: 1
+    Sorcery: 1
+    Resiliance: 1
+  motivation:
+    desire:
+      name: Revenge
+      text: ""
+    fear:
+      name: Humiliation
+      text: ""
+    strength:
+      name: Independent
+      text:
+    flaw:
+      name: Intolerance
+      text: ""
+  equipment:
+    - Totem of the Imp
+    - Fine Cloak
+    - Travel Kit
+  silver: 10
+- name: Salawesi Hafisi
+  setting: BaldaariSetting
+  archetype: Acrobat
+  career: Swashbuckler
+  player: Paul
+  wound_threshold: 15
+  strain_threshold: 10
+  melee_defense: 1
+  ranged_defense: 1
+  characteristics:
+    BR: 3
+    AG: 4
+    INT: 2
+    CUN: 3
+    WILL: 2
+    PR: 1
+  skills:
+    Coordination: 2
+    Melee (Light): 1
+    Stealth: 1
+    Ranged: 1
+  talents:
+  motivation:
+    desire:
+      name: Vengeance
+      text: "He has honed himself down to only one goal in his life, to kill
+            the hated slaver who enslaved and killed his family. He has no time
+            for other goals or pursuits"
+    fear:
+      name: Commitment
+      text: "He guards himself against friendship, duty to a cause, or love,
+            as this takes away from his pursuit of vengeance. He commits to a
+            group only if he sees that it will somehow further his goal for a
+            reasonable effort on his part."
+    strength:
+      name: Independent
+      text: "The loss of his tribe and family left him with no support structure
+            and he has survived by becoming ruthlessly independent.  “To depend
+            upon others is to be disappointed."
+    flaw:
+      name: "Deception"
+      text: "As he wants no one to know what he is really doing, as he fears his
+            target will be warned and will protect himself better."
+  background: "A Southron tribal member whose tribe and family were wiped out by
+            slavers some years ago. He seeks to avenge this on the slaver who led
+            the raid, but the only thing he knows is that the raid came from Badaar
+            and the raider used a double ram’s head as an emblem. He sought work as
+            a sell-sword to caravans in order to get to Badaar and learn more of the
+            slavers who raid deep into the desert."
+  equipment:
+    - Leather Armor
+    - Rapier
+    - Flintlock Pistol
+    - Travel Kit
+  silver: 100
