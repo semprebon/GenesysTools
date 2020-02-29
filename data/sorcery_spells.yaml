@@ -1,0 +1,177 @@
+spells:
+  # Attack
+  Demand Repentance:
+    action: attack
+    skill: Sorcery
+    effect: "The targets brain is overwhelmed with debilitizing guilt.
+      Counts as an Attack action doing stun damage equal to [Presence] that
+      is applied directly to target's strain threshold."
+    difficulty: 1
+    range: short
+
+  Conclave of Dread:
+    action: attack
+    skill: Sorcery
+    effect: "All creatures and spirits engaged with the target suffer
+      an overwhelming dread. Counts as an Attack action doing stun damage
+      equal to [Presence] that is applied directly to target's strain
+      threshold."
+    difficulty: 2
+    range: short
+
+  Whisper of Woe:
+    action: attack
+    skill: Sorcery
+    effect: "You speak words to a target you are engaed with, bringing dismay.
+      Counts as an Attack action doing stun damage equal to [Presence] that
+      is applied directly to target's strain threshold."
+    difficulty: 2
+    range: engaged
+
+  Doubt of the Unbeliever:
+    action: attack
+    skill: Sorcery
+    effect: "The target is overcome with doubt as to what to do next.
+      Counts as an Attack action doing stun damage equal to [Presence] that
+      is applied directly to target's strain threshold. By spending [AD][AD],
+      the target becomes immoblized and can't perform manuevers for [Charm]
+      rounds"
+    difficulty: 2
+    range: short
+
+  Bring Low the Unrighteous:
+    action: attack
+    skill: Sorcery
+    effect: "The target is awed by the power of your faith.
+      Counts as an Attack action doing stun damage equal to [Presence] that
+      is applied directly to target's strain threshold. Spend [AD][AD]
+      to have the target fall to their knees in supplication, OR become
+      disoriented and must add [SB] to all their skill checks for the next
+      [Charm] rounds. For [AD][AD][AD][AD], you can apply both effects."
+    difficulty: 2
+    range: short
+
+  Rebuke the Sinner:
+    action: attack
+    skill: Sorcery
+    effect: "Counts as an Attack action doing stun damage equal
+      to 2 x [Presence] that is applied directly to target's strain threshold."
+    difficulty: 3
+    range: short
+
+  # Augment
+  Blessing of the Spirits:
+    action: augment
+    skill: Sorcery
+    effect: "Until the end of your next turn, the target increases the
+    ability of any skill checks by 1, in effect adding [AB] to their check."
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  Blessing of Nimbleness:
+    action: augment
+    skill: Sorcery
+    effect: "Until the end of your next turn, the target can perform a
+    second maneuver without spending strain. They also increases the
+    ability of any skill checks by 1, in effect adding [AB] to their check."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  # Barrier
+  Shield of Faith:
+    action: barrier
+    skill: Sorcery
+    effect: "The target is shielded from mental attacks. Until the
+        spell ends, reduce the damage of all attacks with the Stun Damage
+        quality, including all Sorcery attacks, by 1, plus an addition 1
+        for every [SU] rolled."
+    difficulty: 1
+    range: engaged
+    concentration: true
+
+  Aegus of the Devout:
+    action: barrier
+    skill: Sorcery
+    effect: "Creatures attempting to engage the target are overwhelmed
+      with dread. Any creature trying to move into engaged range of the
+      target must first spend an action to make a Discipline check with
+      difficulty [DI], plus [DI] for every uncancelled [SU][SU] beyond the first.
+      If they fail, they are unable to engage with the target that round"
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  # Conjure
+  Summon Vengeful Imp:
+    action: conjure
+    skill: Sorcery
+    effect: "You summon an imp from your totem, which appeas at to your
+        current location engaged with you. The
+        imp is friendly to you and obeys your commands. You
+        may spend a manuever to order it to do something specific. Otherwise,
+        it will defend itself, you, and your allies. It moves
+        immediately after you do each round. Once the spell ends, the animal
+        returns to its previous locationacts normally, and is not controlled by you. It moves
+        immediately after you do each round. Once the spell ends, the animal
+        returns to its previous location."
+    difficulty: 1
+    range: engaged
+    concentration: true
+
+  Spirit Guardians:
+    action: conjure
+    skill: Sorcery
+    effect: "You summon several minor guardian spirits that are allied
+        with your god, religion, tribe, or family. The number of spirits
+        summoned is 2, but you may spend [AD][AD] for each additional
+        spirit after rolling. These spirits appear at
+        your current location engaged with you. The
+        spirits are friendly to you and obeys your orders. It moves
+        immediately after you do each round. You
+        may spend a manuever to order it to do something specific. Otherwise,
+        it will defend itself, you, and your allies. Once the spell ends, the spirits
+        return to the spirit realm."
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  Evil Eye:
+    action: curse
+    skill: Sorcery
+    effect: "You curse 1 target, causing them to be confused and distracted.
+        This decreases the ability of all skill checks by
+        that target by [AB] - essentially, removing one [AB] from their check,
+        until the spell ends."
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  Succor:
+    action: heal
+    skill: Sorcery
+    effect: "The target is brought into a state of quiet contemplation. They
+      recovers strain for every uncancelled [SU] or [AD][AD]"
+    difficulty: 1
+    range: engaged
+    concentration: false
+
+  Comfort the Suffering:
+    action: heal
+    skill: Sorcery
+    effect: "Softly spoken words comfort and calm the target. They remove one
+      status condition they are suffering, as well as healing 1 strain
+      per [SU] or [AD][AD] you spend."
+    difficulty: 2
+    range: engaged
+    concentration: false
+
+  Exault the Martyr:
+    action: heal
+    skill: Sorcery
+    effect: "Cast on an incapacited target, their mind is cleared and they revive from
+        their incapacitation. In addition, they recover 1 strain per [SU] or [AD][AD] you spend."
+    difficulty: 2
+    range: engaged
+    concentration: false

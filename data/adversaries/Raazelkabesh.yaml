@@ -1,0 +1,141 @@
+- name: Raazalkabesh Thug
+  type: Minion
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 2
+    PR: 2
+  soak_value: 4
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Brawl:
+    Coercion:
+    Melee (Light):
+    Resilience:
+    Vigilance:
+  equipment:
+    - Padded Armor
+    - Mace
+    - Cestus
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+#- name: Raazalkabesh Thug Leader
+#  type: Rival
+#  characteristics:
+#    BR: 3
+#    AG: 2
+#    INT: 1
+#    CUN: 2
+#    WILL: 2
+#    PR: 2
+#  soak_value: 4
+#  wound_threshold: 11
+#  melee_defense: 0
+#  ranged_defense: 0
+#  skills:
+#    Brawl: 2
+#    Coercion: 3
+#    Melee (Light): 2
+#    Resilience: 3
+#    Skulduggery: 3
+#    Streetwise: 2
+#    Vigilance: 2
+#  equipment:
+#    - Leather Armor
+#    - Mace
+#    - Cestus
+#  power_levels:
+#    combat: 2
+#    social: 1
+#    general: 1
+
+- name: Raazalkabesh Assassin
+  type: Rival
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 2
+    PR: 2
+  soak_value: 4
+  wound_threshold: 11
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Coercion: 3
+    Melee (Light): 3
+    Ranged: 3
+    Resilience: 3
+    Skulduggery: 3
+    Vigilance: 2
+  equipment:
+    - Leather Armor
+    - Dagger
+    - Smokebomb
+    - Sword
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1
+
+- name: Raazalkabesh Skirmisher
+  type: Minion
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 2
+  soak_value: 4
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Melee (Light):
+    Ranged:
+    Vigilance:
+  equipment:
+    - Leather Armor
+    - Sword
+    - Crossbow
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1
+
+- name: Raazalkabesh Mercenary Sargent
+  type: Rival
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 2
+    CUN: 2
+    WILL: 2
+    PR: 2
+  soak_value: 5
+  wound_threshold: 11
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    Athletics: 2
+    Discipline: 1
+    Melee (Light): 2
+    Ranged: 2
+    Vigilance: 2
+  equipment:
+    - Brigandine Armor
+    - Sword
+    - Crossbow
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1

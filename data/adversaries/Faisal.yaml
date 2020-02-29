@@ -1,0 +1,39 @@
+- name: Faisal el-Kabeer
+  type: Rival
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 3
+    CUN: 2
+    WILL: 1
+    PR: 3
+  soak_value: 2
+  wound_threshold: 10
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Charm: 2
+    Cool: 3
+    Deception: 3
+    Discipline: 3
+    Knowledge (Lore): 5
+    Negotiation: 2
+    Perception: 4
+    Vigilance: 3
+  actions:
+    Punch:
+      type: weapon
+      skill: Melee (Light)
+      damage: +0
+      crit: 6
+      range: Engaged
+    Improvised Weapon:
+      type: weapon
+      skill: Melee (Light)
+      damage: +1
+      crit: 6
+      range: Engaged
+  power_levels:
+    combat: 1
+    social: 3
+    general: 3

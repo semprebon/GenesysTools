@@ -54,3 +54,7 @@ def test_format_modifier():
     assert genesys_common.format_modifier(0) == "+0"
     assert genesys_common.format_modifier(+3) == "+3"
 
+def test_scale_to_fit():
+    from genesys_common import scale_to_fit
+    assert(scale_to_fit([10,20], [40,40])) == [20,40]
+    assert(scale_to_fit([10,5], [40,40])) == [40,20]

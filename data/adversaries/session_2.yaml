@@ -1,0 +1,216 @@
+- name: Dholem, Small
+  type: Minion
+  characteristics:
+    BR: 1
+    AG: 2
+    INT: 2
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics:
+    Brawl:
+    Survival:
+    Vigilance:
+  abilities:
+    Pack Tactics: "when minion group consists of 2+ minions and is engaged with
+        a target, spend maneuver to prevent target from disengaging until end
+        of their next turn and add [AD][AD] to next combat check against that target"
+    Mechanical: "does not need to breathe, eat, or drink, and can survive in a
+        vacuum and underwater. Immune to poisons and toxins,"
+  silhouette: 0
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 2
+      crit: 3
+      range: Engaged
+      qualities:
+        - Knockdown 1
+        - Vicious 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 2
+
+- name: Dholem
+  type: Rival
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 2
+    CUN: 2
+    WILL: 2
+    PR: 1
+  soak_value: 4
+  wound_threshold: 12
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics:
+    Brawl:
+    Survival:
+    Vigilance:
+  abilities:
+    Pack Tactics: "On successful combat check, next ally combat check against
+          target during the round adds [AD][AD]"
+    Mechanical: "does not need to breathe, eat, or drink, and can survive in a
+        vacuum and underwater. Immune to poisons and toxins,"
+  silhouette: 0
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 3
+      crit: 3
+      range: Engaged
+      qualities:
+        - Knockdown 1
+        - Pierce 1
+  power_levels:
+    combat: 2
+    social: 1
+    general: 2
+
+- name: Dholem, Armored
+  type: Rival
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 2
+    CUN: 2
+    WILL: 2
+    PR: 1
+  soak_value: 5
+  wound_threshold: 15
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics:
+    Brawl:
+    Survival:
+    Vigilance:
+  abilities:
+    Pack Tactics: "On successful combat check, next ally combat check against
+          target during the round adds [AD][AD]"
+    Mechanical: "does not need to breathe, eat, or drink, and can survive in a
+        vacuum and underwater. Immune to poisons and toxins,"
+  silhouette: 0
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 3
+      crit: 3
+      range: Engaged
+      qualities:
+        - Knockdown 1
+        - Pierce 1
+  power_levels:
+    combat: 3
+    social: 1
+    general: 2
+
+- name: Cave Spider
+  type: Rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 3
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 9
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics:
+    Brawl:
+    Survival:
+    Vigilance:
+  abilities:
+    Skitter: "Can move across walls, ceilings, and webs without penalty"
+  actions:
+    Venomous Bite:
+      type: attack
+      skill: Brawl
+      damage: 3
+      crit: 3
+      range: Engaged
+      qualities:
+        - Disorient 4
+        - Burn 2
+        - Pierce 2
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Ghost, Lesser
+  type: Minion
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 1
+    CUN: 2
+    WILL: 2
+    PR: 1
+  soak_value: 1
+  wound_threshold: 3
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Coercion:
+    Vigilance:
+  abilities:
+    Spirit Sense: "Can feel the presence of creatures regardless of lighting"
+    Incorporial: "Move through dooes and walls; 1/2 damage before applying soak
+        from physicla damage."
+  actions:
+    Anguish of the Damned:
+      type: other
+      description: "The ghosts target a creature it is engaged with and fills
+        its mind with horrifiying sounds and images. The target must make an
+        opposed Discipline check vs the ghost's Coercion, loosing 1 strain per [FA]."
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Gray Ooze
+  type: Rival
+  characteristics:
+    BR: 4
+    AG: 1
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 3
+  wound_threshold: 13
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Brawl: 1
+    Vigilance: 2
+  abilities:
+    Amorphous: "Can change shape to fit through small cracks"
+  actions:
+    Pseudopod:
+      type: attack
+      skill: Brawl
+      range: Engaged
+      damage: 6
+      crit: 4
+      qualities:
+        - Ensnare 3
+  power_levels:
+    combat: 5
+    social: 1
+    general: 1

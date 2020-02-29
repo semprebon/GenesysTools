@@ -21,6 +21,9 @@ class CardPageLayout:
         self.counts = [columns, rows]
         self.cards_per_page = columns * rows
 
+    def content_size(self):
+        return [ self.card_size[i] - 2*self.card_margin for i in [0,1] ]
+
     def to_extents(self, value):
         if isinstance(value, list):
             return value

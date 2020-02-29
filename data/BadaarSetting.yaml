@@ -1,3 +1,9 @@
+files:
+  - items\weapons
+  - items\armor
+  - items\gear
+  - items\implements
+  - items\concoctions
 skills:
   Alchemy:
     characteristic: INT
@@ -119,6 +125,7 @@ skills:
     characteristic: CUN
     ref: 69
     type: magic
+
 archetypes:
   Nomad:
     characteristics:
@@ -180,6 +187,7 @@ archetypes:
       - athletics
     tough_as_nails: 'Once per session, your character may spend a Story Point as an out-of-turn inciden- tal immediately after
     suffering a Critical Injury and determining the result. If they do so, they count the result rolled as “01.'
+
 careers:
   Alban Priest:
     skills:
@@ -192,5 +200,24 @@ careers:
       - Melee (Light)
       - Negotiation
 
+talents:
+  Adversary:
+    tier: 1
+    activation: passive
+    ranked: true
+    description: "Combat attacks against character upgrade difficulty by rank."
+  Coercive Sorcery:
+    tier: 1
+    activation: passive
+    ranked: false
+    description: "Use Coercion instead of Charm as the knowledge skill for Sorcery."
+  Quick Draw:
+    tier: 1
+    activation: Active (Incidental)
+    ranked: false
+    description: "On your turn you may draw an easily accessible weapon as an
+        incidental.Quick Draw also reduces a weapon's Prepare rating by one,
+        to a minimum of one."
 
-      
+
+

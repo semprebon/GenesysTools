@@ -1,77 +1,418 @@
-- name: Mace
-  type: weapon
-  encumbrance: 2
-  rarity: 1
-  mp: 1
-  weapon:
-    skill: Melee (Light)
-    damage: +3
-    crit: 4
-    range: Enganged
-    special:
-- name: Sword
-  type: weapon
-  encumbrance: 1
-  rarity: 2
-  mp: 1
-  weapon:
-    skill: Melee (Light)
-    damage: +3
-    crit: 2
-    range: Enganged
-    special: Defensive 1
-- name: Shield
-  type: weapon
-  encumbrance: 1
-  rarity: 1
-  mp: 1
-  weapon:
-    skill: Melee (Light)
-    damage: +0
-    crit: 6
-    range: Enganged
-    special: Defensive 1, Deflection 1, Inaccurate 1, Knockdown
-- name: Rapier
-  type: weapon
-  encumbrance: 1
-  rarity: 3
-  mp: 1
-  weapon:
-    skill: Melee (Light)
-    damage: +3
-    crit: 2
-    range: Enganged
-    special: Defensive 2
-- name: Flintlock Pistol
-  type: weapon
-  encumbrance: 2
-  rarity: 5
-  mp: 1
-  weapon:
-    skill: Ranged
-    damage: +5
-    crit: 5
-    range: Short
-    special: Prepare 1, Limited Ammo 1
-- name: Cestus
-  type: weapon
-  encumbrance: 1
-  rarity: 1
-  mp: 0
-  weapon:
-    skill: Brawl
-    damage: +1
-    crit: 4
-    range: Enganged
-    special: Disorient 3
-- name: Dagger
-  type: weapon
-  encumbrance: 1
-  rarity: 1
-  mp: 1
-  weapon:
-    skill: Melee (Light)
-    damage: +2
-    crit: 3
-    range: Enganged
-    special: Accurate 1
+# Common Weapons
+
+# Melee Weapons
+items:
+  Axe:
+    type: weapon
+    encumbrance: 2
+    rarity: 1
+    mp: 1
+    price: 150
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +3
+      crit: 3
+      range: Enganged
+      qualities:
+        - Vicious 1
+
+  Cestus:
+    type: weapon
+    encumbrance: 1
+    rarity: 1
+    mp: 0
+    price: 40
+    action:
+      type: attack
+      skill: Brawl
+      damage: +1
+      crit: 4
+      range: Enganged
+      qualities:
+        - Disorient 3
+
+  Dagger:
+    type: weapon
+    encumbrance: 1
+    rarity: 1
+    mp: 1
+    price: 60
+    actions:
+      Stab:
+        type: attack
+        skill: Melee (Light)
+        damage: +2
+        crit: 3
+        range: Enganged
+        qualities:
+          - Accurate 1
+      Throw:
+        type: attack
+        skill: Ranged
+        damage: +2
+        crit: 3
+        range: Short
+        qualities:
+          - Accurate 1
+          - Limited Ammo 1
+
+  Flail:
+    type: weapon
+    encumbrance: 2
+    rarity: 3
+    mp: 2
+    price: 150
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: +4
+      crit: 3
+      range: Enganged
+      qualities:
+        - Vicious 1
+
+  Greataxe:
+    type: weapon
+    encumbrance: 4
+    rarity: 4
+    mp: 2
+    price: 300
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: +4
+      crit: 3
+      range: Enganged
+      qualities:
+        - Cumbersome 3
+        - Pierce 2
+        - Vicious 1
+
+  Greatsword:
+    type: weapon
+    encumbrance: 3
+    rarity: 4
+    mp: 2
+    price: 300
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: +4
+      crit: 2
+      range: Enganged
+      qualities:
+        - Defensive 1
+        - Pierce 1
+        - Unwieldly 3
+
+  Halberd:
+    type: weapon
+    encumbrance: 5
+    rarity: 3
+    mp: 3
+    price: 250
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: +3
+      crit: 3
+      range: Enganged
+      qualities:
+        - Defensive 1
+        - Pierce 3
+
+  Mace:
+    type: weapon
+    encumbrance: 2
+    rarity: 1
+    mp: 1
+    price: 75
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +3
+      crit: 4
+      range: Enganged
+
+  Military Pick:
+    type: weapon
+    encumbrance: 3
+    rarity: 2
+    mp: 1
+    price: 160
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +4
+      crit: 4
+      range: Enganged
+      qualities:
+        - Pierce 2
+
+  Rapier:
+    type: weapon
+    encumbrance: 1
+    rarity: 3
+    mp: 1
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +3
+      crit: 2
+      range: Enganged
+      qualities:
+        - Defensive 2
+
+  Shield:
+    type: weapon
+    encumbrance: 1
+    rarity: 1
+    mp: 1
+    price: 80
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +0
+      crit: 6
+      range: Enganged
+      qualities:
+        - Defensive 1
+        - Deflection 1
+        - Inaccurate 1
+        - Knockdown
+
+  Shield (Large):
+    type: weapon
+    encumbrance: 2
+    rarity: 2
+    mp: 2
+    price: 160
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +1
+      crit: 5
+      range: Enganged
+      qualities:
+        - Defensive 1
+        - Deflection 1
+        - Inaccurate 1
+        - Knockdown
+
+  Spear (Light):
+    type: weapon
+    encumbrance: 2
+    rarity: 1
+    mp: 1
+    price: 90
+    actions:
+      Stab:
+        type: attack
+        skill: Melee (Light)
+        damage: 2
+        crit: 4
+        range: Engaged
+        qualities:
+          - Defensive 1
+          - Accurate 1
+      Throw:
+        type: attack
+        skill: Ranged
+        damage: 2
+        crit: 4
+        range: Short
+        qualities:
+          - Accurate 1
+          - Limited Ammo 1
+
+  Spear:
+    type: weapon
+    encumbrance: 3
+    rarity: 2
+    mp: 1
+    price: 110
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: 3
+      crit: 3
+      range: Engaged
+      qualities:
+        - Accurate 1
+
+  Staff:
+    type: weapon
+    encumbrance: 2
+    rarity: 1
+    mp: 1
+    price: 40
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: 2
+      crit: 4
+      range: Engaged
+      qualities:
+        - Accurate 1
+        - Defensive 1
+
+  Sword:
+    type: weapon
+    encumbrance: 1
+    rarity: 2
+    mp: 1
+    price: 200
+    action:
+      type: attack
+      skill: Melee (Light)
+      damage: +3
+      crit: 2
+      range: Enganged
+      qualities:
+        - Defensive 1
+
+  Warhammer:
+    type: weapon
+    encumbrance: 4
+    rarity: 3
+    mp: 1
+    price: 600
+    action:
+      type: attack
+      skill: Melee (Heavy)
+      damage: +5
+      crit: 4
+      range: Enganged
+      qualities:
+        - Concussive 1
+        - Cumbersome 4
+        - Inaccurate 1
+        - Knockdown
+
+  # Ranged Weapons
+  Bow:
+    type: weapon
+    encumbrance: 2
+    mp: 1
+    price: 275
+    rarity: 2
+    action:
+      type: attack
+      skill: Ranged
+      damage: +7
+      crit: 3
+      range: Medium
+      qualities:
+        - Unwieldy 2
+
+  Longbow:
+    type: weapon
+    encumbrance: 3
+    mp: 2
+    price: 450
+    rarity: 4
+    action:
+      type: attack
+      skill: Ranged
+      damage: 8
+      crit: 3
+      range: Long
+      qualities:
+        - Unwieldy 3
+
+  Crossbow:
+    type: weapon
+    encumbrance: 3
+    mp: 1
+    price: 600
+    rarity: 4
+    action:
+      type: attack
+      skill: Ranged
+      damage: 7
+      crit: 2
+      range: Medium
+      qualities:
+        - Pierce 2
+        - Prepare 1
+
+  Crossbow, Heavy:
+    type: weapon
+    encumbrance: 4
+    mp: 2
+    price: 1000
+    rarity: 5
+    action:
+      type: attack
+      skill: Ranged
+      damage: 8
+      crit: 2
+      range: Long
+      qualities:
+        - Cumbersome 3
+        - Pierce 3
+        - Prepare 2
+
+  Flintlock Pistol:
+    type: weapon
+    encumbrance: 2
+    rarity: 7
+    mp: 1
+    cost: 1000
+    action:
+      type: attack
+      skill: Ranged
+      damage: +5
+      crit: 5
+      range: Short
+      qualities:
+        - Prepare 1
+        - Limited Ammo 1
+
+  Sling:
+    type: weapon
+    encumbrance: 0
+    mp: 0
+    price: 20
+    rarity: 0
+    action:
+      type: attack
+      skill: Ranged
+      damage: +4
+      crit: 4
+      range: Medium
+      qualities:
+        - Disorient 2
+        - Prepare 1
+
+  Throwing Axe:
+    type: weapon
+    encumbrance: 1
+    rarity: 1
+    mp: 1
+    price: 50
+    actions:
+      Throw:
+        type: attack
+        skill: Ranged
+        damage: +2
+        crit: 3
+        range: Short
+        qualities:
+          - Inaccurate 1
+          - Limited Ammo 1
+          - Vicious 1
+      Swing:
+        type: attack
+        skill: Melee (Light)
+        damage: +2
+        crit: 3
+        range: Engaged
+        qualities:
+          - Inaccurate 1
+          - Vicious 1
+
+
+
+

@@ -1,0 +1,271 @@
+spells:
+  # Attack
+  Flaying the Damned:
+    action: attack
+    skill: Witchcraft
+    effect: "The target's skin starts pealing off as if it were flayed
+        by a whip.
+        Counts as an Attack action doing damage equal to [Cunnning], with no chance
+        of a critical"
+    difficulty: 1
+    range: short
+
+  Withering Touch:
+    action: attack
+    skill: Witchcraft
+    effect: "You touch the target, and the area touched grows weak and numb.
+        Counts as an Attack action doing damage equal to [Cunnning], with no chance
+        of a critical"
+    difficulty: 2
+    range: short
+    effects: Close Combat
+
+  Exploding Cist:
+    action: attack
+    skill: Witchcraft
+    effect: "Some point within the targets body explode, damaging the
+        nearby tissue. Counts as an Attack action doing damage equal to
+        [Cunnning], with a critical costing [AD][AD]. Add 10 x [Medicine] to
+        the critical hit roll"
+    difficulty: 2
+    range: short
+    effects: Deadly
+
+  Virulent Pustules:
+    action: attack
+    skill: Witchcraft
+    effect: "Pustules form on the target's skin. Counts as an Attack
+        action doing damage equal to [Cunnning]. Spend [AD][AD] and the
+        pustules burst open and spread. Each following round for [Medicine]
+        rounds, at the start of the target's turn they take an additional
+        [Cunning] damage"
+    difficulty: 2
+    range: short
+    effects: Virulent (Burn)
+
+  Disabling Spasm:
+    action: attack
+    skill: Witchcraft
+    effect: "The target's muscles spasm painfully. Counts as an Attack
+        action doing damage equal to [Cunnning]. By spending [AD][AD], the
+        spasms are disabling. The target becomes immoblized and can't perform
+        manuevers for [Medicine] rounds"
+    difficulty: 2
+    range: short
+    effects: Spasm (Ice)
+
+  Rain of Blood:
+    action: attack
+    skill: Witchcraft
+    effect: "Blood bursts out from the target's bosy, forming many small wounds.
+        Counts as an Attack action doing damage equal to [Cunnning]. Spend [AD][AD]
+        to have the target feint and fall prone, OR become disoriented and must add
+        [SB] to all their skill checks for the next [Medicine] rounds. For
+        [AD][AD][AD][AD], you can apply both effects."
+    difficulty: 2
+    range: short
+    effects: Swoon (Disorient, Knockdown)
+
+  Rending Flesh:
+    action: attack
+    skill: Witchcraft
+    effect: "The target's flesh splits open as if deaply cut. Counts as an Attack
+        action doing damage equal to 2 x [Cunnning]."
+    difficulty: 3
+    range: short
+    effects: Empowered
+
+  # Augment
+  Invigorting Humors:
+    action: augment
+    skill: Witchcraft
+    effect: "The target is invigorated. Until the end of your next
+    turn, the target increases the ability of any skill checks by 1, in
+    effect adding [AB] to their check."
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  Strengthen the Flesh:
+    action: augment
+    skill: Witchcraft
+    effect: "The target's bones and muscles become tougher, and their
+    wound threshhold increases by [Medicine] until the spell ends. In
+    addition the target increases the ability of any skill checks
+    by 1, in effect adding [AB] to their check."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  Speed of the Cheetah:
+    action: augment
+    skill: Witchcraft
+    effect: "The target is able to move faster - until the spell ends,
+    they can take a second maneuver without spending strain.
+    In addition the target increases the ability of any skill checks
+    by 1, in effect adding [AB] to their check."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  Claws of the Tiger:
+    action: augment
+    skill: Witchcraft
+    effect: "The target grows retractable claws on their hands. Until the
+      spell ends, they may use the claws to make unarmed attacks with a base
+      damage of [Medicine] and a critical rating of 3.
+      In addition the target increases the ability of any skill checks
+      by 1, in effect adding [AB] to their check."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  # Barrier
+  Barkskin:
+    action: barrier
+    skill: Witchcraft
+    effect: "The target's skin grows hard scales. Until the
+      spell ends, reduce the damage of all hits the target suffers by 1,
+      plus an addition 1 for every [SU][SU] rolled."
+    difficulty: 1
+    range: engaged
+    concentration: true
+
+  Skin of the Crocodile:
+    action: barrier
+    skill: Witchcraft
+    effect: "The target's skin grows hard scales that refract
+        scintillating colors that match the surrounding environment.
+        Until the spell ends, the target gains melee and ranged
+        increase by [Medicine], as well as reducing the damage of all
+        hits the target suffers by 1, plus an addition 1 for
+        every [SU][SU] rolled."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  Carapace of the Pangolin:
+    action: barrier
+    skill: Witchcraft
+    effect: "The target's skin grows boney scales. Until the
+      spell ends, reduce the damage of all hits the target suffers by 1,
+      plus an addition 1 for every [SU] rolled."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  Summon Minor Beast:
+    action: conjure
+    skill: Witchcraft
+    effect: "You reach out to a minion beast within a few miles and pull it
+        through the aether to your current location engaged with you. The
+        beast acts normally, and is not controlled by you. It moves
+        immediately after you do each round. Once the spell ends, the animal
+        returns to its previous location."
+    difficulty: 1
+    range: engaged
+    concentration: true
+
+  Summon Minor Undead:
+    action: conjure
+    skill: Witchcraft
+    effect: "You reach out to a minion undead entity within a few miles and
+        pull it through the ether to your current location engaged with you. The
+        undead acts normally, and is not controlled by you. It moves
+        immediately after you do each round. Once the spell ends, the animal
+        returns to its previous location."
+    difficulty: 1
+    range: engaged
+    concentration: true
+
+  Summon Small Familiar:
+    action: conjure
+    skill: Witchcraft
+    effect: "You reach out to a minion animal you know within a few miles
+        and pull it through the aether to your current location engaged
+        with you. The animal if friendly to you and obeys your commands. You
+        may spend a manuever to order it to do something specific. Otherwise,
+        it will defend itself, you, and your allies. It moves
+        immediately after you do each round. Once the spell ends, the animal
+        returns to its previous location."
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  Summon Familiar:
+    action: conjure
+    skill: Witchcraft
+    effect: "You reach out to a rival animal you know within a few miles
+        and pull it through the aether to your current location engaged
+        with you. The animal if friendly to you and obeys your commands. You
+        may spend a manuever to order it to do something specific. Otherwise,
+        it will defend itself, you, and your allies. It moves
+        immediately after you do each round. Once the spell ends, the animal
+        returns to its previous location."
+    difficulty: 3
+    range: engaged
+    concentration: true
+
+  Torment:
+    action: curse
+    skill: Witchcraft
+    effect: "You curse 1 target, causing their body to eb wracked with pain,
+        maiking it difficult to concentrate. This decreases the ability of
+        all skill checks by
+        that target by [AD] - essentially, removing one [AD] from their check -
+        until the spell ends."
+    difficulty: 2
+    range: engaged
+    concentration: true
+
+  Bind Wounds:
+    action: heal
+    skill: Witchcraft
+    effect: "Causes the target's wounds to knit together. The target recovers
+        1 wound for every [SU] and one strain for every [AD][AD]"
+    difficulty: 1
+    range: engaged
+    concentration: false
+
+  Semblance of the Crow:
+    action: transform
+    skill: Witchcraft
+    effect: "The witch transforms themselves into a crow until the spell ends.
+      The character keeps their skills, talents, and strain threshold.
+      They drop anything worn or carried when they transformed.
+      If incapacitated, they revert to their normal form. When returning to
+      their normal form, they heal all wounds suffered while a crow,  but keep
+       any strain or Critical Injuries. If incapacitated by wounds
+       they are no longer incapacitated."
+    difficulty: 2
+    range: self
+    concentration: false
+
+  Semblance of the Wolf:
+    action: transform
+    skill: Witchcraft
+    effect: "The witch transforms themselves into a wolf until the spell ends.
+      The character keeps their skills, talents, and strain threshold.
+      They drop anything worn or carried when they transformed.
+      If incapacitated, they revert to their normal form. When returning to
+      their normal form, they heal all wounds suffered while a crow,  but keep
+       any strain or Critical Injuries. If incapacitated by wounds
+       they are no longer incapacitated."
+    difficulty: 3
+    range: self
+    concentration: false
+
+  Semblance of the Dire Rat:
+    action: transform
+    skill: Witchcraft
+    effect: "The witch transforms themselves into a dire rat until the spell ends.
+      The character keeps their skills, talents, and strain threshold.
+      They drop anything worn or carried when they transformed.
+      If incapacitated, they revert to their normal form. When returning to
+      their normal form, they heal all wounds suffered while a crow,  but keep
+       any strain or Critical Injuries. If incapacitated by wounds
+       they are no longer incapacitated."
+    difficulty: 3
+    range: self
+    concentration: false
+

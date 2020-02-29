@@ -1,3 +1,5 @@
+import sys
+
 from reportlab.platypus import BaseDocTemplate, FrameBreak
 
 from genesys_common import batch_list
@@ -15,6 +17,10 @@ class PDFGenerator:
             print("page includes ", [item.get("name") for item in batch])
             doc.addPageTemplates([layout.page_template()])
             for item in batch:
-                story.extend(card.card_face(item))
+                try:
+                    story.extend(card.card_face(item, content_size=layout.content_size()))
+                except BaseException as err:
+                    print(str(err))
+                    raise Exception(f"Error with card {item.get('name')}")
                 story.append(FrameBreak())
         doc.build(story)

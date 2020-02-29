@@ -1,0 +1,85 @@
+name: Sabir al-Ra'eena
+setting: BaldaariSetting
+type: rival
+career: Witch
+player: NPC
+soak_value: 2
+melee_defense: 1
+ranged_defense: 1
+wound_threshold: 15
+characteristics:
+  BR: 2
+  AG: 4
+  INT: 2
+  CUN: 4
+  WILL: 2
+  PR: 2
+skills:
+  Cool: 2
+  Deception: 4
+  Coercion: 2
+  Medicine: 4
+  Stealth: 3
+  Witchcraft: 4
+talents:
+  Adversary: 1
+actions:
+  Flaying the Damned:
+    type: attack
+    action: attack
+    skill: Witchcraft
+    effect: "The target's skin starts pealing off as if it were flayed
+        by a whip."
+    difficulty: 1
+    damage: 4
+    range: medium
+  Simple Curse:
+    type: spell
+    skill: Witchcraft
+    action: curse
+    pool: "[PR][PR][PR][PR][DI][DI]"
+    range: short
+    effects:
+      - Range
+      - Aditional Targets
+    effect: "2 foes within short range are cursed. Until the end of your next turn,
+        they decrease the ability of any skill check by one - effectively removing
+        one [AB]."
+  Heal Wounds:
+    type: spell
+    skill: Witchcraft
+    action: heal
+    pool: "[PR][PR][PR][PR][DI]"
+    range: engaged
+    effects:
+      - Range
+      - Aditional Targets
+    effect: "Up to 2 allies (including self) are healed 1 wound per [SU], and 1
+    strain per [AD]. This can be extended to short range at no cost."
+motivation:
+  desire:
+    name: Ambition
+    text: "Sabir hopes to influence the el-Siq family to great power"
+  fear:
+    name: Obscurity
+    text: "Sabir resents how witches are treated as second class citizens."
+  strength:
+    name: Adaptable
+    text: "Sabir is good at turning failures into future successes."
+  flaw:
+    name: Pride
+    text: "Sabir thinks very highly of her own abilities, and resents those who are better/"
+equipment:
+  - Tome of the Cursed:
+      type: implement
+      encumbrance: 1
+      rarity: 7
+      price: 350
+      description: "A black book that smells of putrescence, bound in unusual leather."
+      implement:
+        effect: "Adds Additional Targets and Increased Range effects at no additional cost."
+  - Heavy Robes (defense 1)
+power_levels:
+  combat: 3
+  social: 2
+  general: 4

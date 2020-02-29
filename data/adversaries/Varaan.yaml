@@ -1,0 +1,98 @@
+name: Varaan al-Mariq
+setting: BadaarSetting
+type: rival
+archetype: Know-It-All
+career: Academy Wizard
+player: NPC
+faction: Raazalkabesh
+wound_threshold: 15
+soak_value: 2
+melee_defense: 1
+ranged_defense: 1
+characteristics:
+  BR: 2
+  AG: 2
+  INT: 4
+  CUN: 3
+  WILL: 3
+  PR: 2
+skills:
+  Alchemy: 3
+  Coercion: 3
+  Perception: 3
+  Sorcery: 3
+  Thaumaturgy: 4
+talents:
+  - Adversary 1
+  - Coercive Sorcery
+actions:
+  Flame Spirit:
+    type: spell
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI][DI]"
+    range: short
+    effect: "Summon 1 hostile Flame Spirit."
+  Magic Missile:
+    type: attack
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI]"
+    range: short
+    damage: 4
+  Magic Missile (Wand):
+    type: attack
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI][DI]"
+    effect: "+30% on critical rolls"
+    range: medium
+    damage: 7
+    crit: 2
+    qualities:
+      - Vicious 4
+  Cone of Shards (Wand):
+    type: attack
+    skill: Thaumaturgy
+    effect: "For [AD][AD], all engaged with target take 3 damage + 1 per [SU].
+      For [AD][AD][AD], this triggers even on failure, includes target"
+    pool: "[PR][PR][PR][AB][DI]"
+    range: short
+    damage: 7
+    qualities:
+      - Blast 4
+  Stunning Blast (Wand):
+    type: attack
+    skill: Sorcery
+    effect: "Stun damage; For [AD][AD], all engaged with target take
+        3 damage + 1 per [SU]. For [AD][AD][AD], this triggers even on
+        failure, includes target; does not affect caster."
+    pool: "[PR][PR][PR][DI][DI]"
+    range: short
+    damage: 6
+    qualities:
+      - Stun Damage
+      - Blast 3
+  Shield of Force:
+    type: spell
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI][DI]"
+    range: engaged
+    effect: "Reduce damage by 1 + 1 for every [SU][SU]; add +3 to Defensee"
+motivation:
+  desire:
+    name: Knowledge
+    text: "If only I can recover the ancient secrets of immortality, I can survive
+        death itself."
+  fear:
+    name: Death
+    text: "If I never die, I can not be punished by the fires of hell."
+  strength:
+    name: Adaptable
+    text: "Survival is a matter of having the right toolkit of skills
+        and powers for whatever life may throw at you."
+  flaw:
+    name: Pride
+    text: "If anyone can do this, I can."
+equipment:
+  - Wand of Blasting
+  - Heavy Robes
+silver: 15
+image: Varaan.jpg

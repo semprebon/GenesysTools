@@ -24,13 +24,13 @@
       type: weapon
       skill: Melee/Light
       damage: 5
-      critical: 4
+      crit: 4
       range: Engaged
     - name: Old Bow
       type: weapon
       skill: Ranged
       damage: 6
-      critical: 3
+      crit: 3
       range: Medium
   power_levels:
     combat: 2
@@ -63,7 +63,7 @@
       type: weapon
       skill: Brawl
       damage: 3
-      critical: 3
+      crit: 3
       range: Engaged
       qualities:
         - Vicious 1
@@ -100,7 +100,7 @@
       type: weapon
       skill: Brawl
       damage: 4
-      critical: 3
+      crit: 3
       range: Engaged
       qualities:
         - Kockdown
@@ -136,7 +136,7 @@
       type: weapon
       skill: Brawl
       damage: 5
-      critical: 3
+      crit: 3
       range: Engaged
       qualities:
         - Kockdown
@@ -149,7 +149,7 @@
 # Sorcery Summonings
 # Imp
 - name: Vengeful Imp
-  type: rival
+  type: Minion
   characteristics:
     BR: 1
     AG: 3
@@ -178,13 +178,13 @@
       type: weapon
       skill: Ranged
       damage: +1
-      critical: 5
+      crit: 5
       range: short
     - name: Tooth and Claw
       type: weapon
       skill: Brawl
       damage: +2
-      critical: 3
+      crit: 3
       range: engaged
       qualities:
         - Vicious 1
@@ -242,7 +242,7 @@
     Witchcraft: 2
     Medicine: 1
   actions:
-    - name: Curse of Confusion
+    Curse of Confusion:
       type: spell
       skill: Sorcery
       pool: "[PR][PR][AB][DI][DI][DI]"
@@ -253,7 +253,7 @@
       type: weapon
       skill: Brawl
       damage: 5
-      critical: 3
+      crit: 3
       range: Engaged
       qualities:
         - Kockdown
@@ -291,7 +291,7 @@
       type: weapon
       skill: Brawl
       damage: 3
-      critical: 5
+      crit: 5
       range: Engaged
       qualities:
         - Burn 1
@@ -326,7 +326,69 @@
       type: weapon
       skill: Brawl
       damage: 3
-      critical: 5
+      crit: 5
+      range: Engaged
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Dire Rat
+  type: minion
+  characteristics:
+    BR: 1
+    AG: 2
+    INT: 2
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 3
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    Athletics:
+    Brawl:
+    Survival:
+    Vigilance:
+  equipment:
+    - name: "Bite"
+      type: weapon
+      skill: Brawl
+      damage: 1
+      crit: 5
+      range: Engaged
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Crow
+  type: rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 3
+  melee_defense: 0
+  ranged_defense: 1
+  skills:
+    Athletics: 2
+    Brawl: 2
+    Perception: 3
+    Vigilance: 3
+  abilities:
+    "Flyer": ""
+  equipment:
+    - name: "Beak & Claw"
+      type: weapon
+      skill: Brawl
+      damage: 3
+      crit: 3
       range: Engaged
   power_levels:
     combat: 1

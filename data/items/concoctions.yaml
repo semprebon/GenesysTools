@@ -1,0 +1,57 @@
+items:
+  Smokebomb:
+    encumbrance: 0
+    rarity: 4
+    price: 25
+    action:
+      skill: Ranged
+      range: short
+      description: "Creates a thick choking cloud containing all engaged;
+        unpleasent and impossible to see through."
+
+  Small Grenade:
+    encumbrance: 0
+    rarity: 5
+    price: 100
+    action:
+      skill: Ranged
+      type: attack
+      range: short
+      damage: 0
+      qualities:
+        - Blast 4
+
+  Alchemist Fire:
+    encumbrance: 0
+    rarity: 5
+    price: 100
+    action:
+      skill: Ranged
+      type: attack
+      range: short
+      damage: 4
+      qualities:
+        - Burn 4
+
+  Acid Flask:
+    encumbrance: 0
+    rarity: 6
+    price: 200
+    action:
+      skill: Ranged
+      range: short
+      description: "Acid cloud forms around anyone engaged with target. Anyone
+        in cloud at start of their turn takes 4 wonds."
+
+  Flash Grenade:
+    encumbrance: 0
+    rarity: 5
+    price: 40
+    action:
+      skill: Ranged
+      range: short
+      description: "In dim or worse light, all within short range (excluding use)
+        of target checks Resiliance check at [DI][DI] or is blinded until the end
+        of their next turn. Blind characters increase checks by [DI][DI], and
+        Perception and Vigilance by an additional [DI]"
+

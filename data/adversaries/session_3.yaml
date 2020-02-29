@@ -1,0 +1,315 @@
+- name: Snake Automaton
+  type: Minion
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 2
+  soak_value: 2
+  wound_threshold: 3
+  melee_defense: 0
+  ranged_defense: 2
+  silhouette: 0
+  skills:
+    Brawl:
+    Perception:
+    Survival:
+  abilities:
+    Mechanical: "Automatons do not need to breath, eat, or drink, and can survive
+        in a vacuum or underwater, and are immune to poisons and toxins"
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 2
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 2
+        - Burn 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 2
+
+# Venomous Snake
+- name: Cobra Automaton
+  type: Rival
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 2
+  soak_value: 1
+  wound_threshold: 4
+  melee_defense: 0
+  ranged_defense: 2
+  silhouette: 0
+  skills:
+    Brawl: 2
+    Coercion: 2
+    Perception: 2
+    Ranged: 1
+    Survival: 2
+  talents:
+    - Adversary 1
+  abilities:
+    Mechanical: "Automatons do not need to breath, eat, or drink, and can survive
+        in a vacuum or underwater, and are immune to poisons and toxins"
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 2
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 2
+        - Burn 1
+    Spit:
+      type: attack
+      skill: Ranged
+      damage: 1
+      critical: 5
+      range: Engaged
+      qualities:
+        - Burn 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 3
+
+# Venomous Snake
+- name: Avatar of Aapep
+  type: Rival
+  characteristics:
+    BR: 4
+    AG: 3
+    INT: 2
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 6
+  wound_threshold: 25
+  melee_defense: 0
+  ranged_defense: 0
+  silhouette: 2
+  skills:
+    Athletics: 3
+    Brawl: 4
+    Coordination: 3
+    Perception: 4
+    Ranged: 2
+    Resilience: 3
+    Vigilance: 4
+  talents:
+    - Adversary 1
+  abilities:
+    Mechanical: "Automatons do not need to breath, eat, or drink, and can survive
+        in a vacuum or underwater, and are immune to poisons and toxins"
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 4
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 4
+        - Burn 1
+    Ensnare:
+      type: attack
+      skill: Brawl
+      damage: +0
+      critical: 6
+      range: Engaged
+      qualities:
+        - Ensnare 1
+    Spit:
+      type: attack
+      skill: Ranged
+      damage: 2
+      critical: 5
+      range: Engaged
+      qualities:
+        - Burn 2
+  power_levels:
+    combat: 5
+    social: 0
+    general: 2
+
+- name: Spider Automaton
+  type: Minion
+  characteristics:
+    BR: 1
+    AG: 2
+    INT: 1
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold:
+  melee_defense: 0
+  ranged_defense: 2
+  silhouette: 0
+  skills:
+    Brawl:
+    Perception:
+  abilities:
+    Mechanical: "Automatons do not need to breath, eat, or drink, and can survive
+        in a vacuum or underwater, and are immune to poisons and toxins"
+  actions:
+    Drop-Bite:
+      type: attack
+      skill: Brawl
+      damage: 2
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 2
+        - Burn 1
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 2
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 2
+        - Burn 1
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Venomous Snake
+- name: Avatar of Neeth
+  type: Rival
+  characteristics:
+    BR: 4
+    AG: 3
+    INT: 2
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 6
+  wound_threshold: 25
+  melee_defense: 0
+  ranged_defense: 0
+  silhouette: 2
+  skills:
+    Athletics: 3
+    Brawl: 4
+    Coordination: 3
+    Perception: 4
+    Ranged: 2
+    Resilience: 3
+    Vigilance: 4
+  talents:
+    - Adversary 1
+  abilities:
+    Mechanical: "Automatons do not need to breath, eat, or drink, and can survive
+        in a vacuum or underwater, and are immune to poisons and toxins"
+  actions:
+    Bite:
+      type: attack
+      skill: Brawl
+      damage: 4
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 4
+        - Burn 3
+    Spawn:
+      type: other
+      description: Easy Coordination roll, Release 1 spider minion per success
+  power_levels:
+    combat: 5
+    social: 0
+    general: 2
+
+- name: Undead Skeleton
+  type: minion
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 2
+  wound_threshold: 4
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    - Perception
+    - Ranged
+    - Melee (Light)
+    - Vigilance
+  equipment:
+    - name: Rusty Blade
+      type: weapon
+      skill: Melee/Light
+      damage: 5
+      crit: 4
+      range: Engaged
+    - name: Old Bow
+      type: weapon
+      skill: Ranged
+      damage: 6
+      crit: 3
+      range: Medium
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1
+
+- name: Wraith
+  type: Rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 2
+    CUN: 3
+    WILL: 3
+    PR: 1
+  soak_value: 0
+  wound_threshold: 19
+  melee_defense: 3
+  ranged_defense: 3
+  skills:
+    Brawl: 3
+    Cool: 2
+    Discipline: 2
+    Ranged: 1
+  abilities:
+    Ghostly: "May move over terrain and through walls without penalty. 1/2 damage
+      before soak unless attack was magical. At the start of the encounter foes
+      make a fear check at [DI][DI][DI][DI] as out of turn incidental (see GCR 243)"
+  actions:
+    Spectral Claws:
+      type: weapon
+      skill: Brawling
+      damage: 2
+      crit: 1
+      range: Engaged
+      qualities:
+        - Breach 1
+        - Stun Damage
+    Wailing Cry:
+      type: weapon
+      skill: Ranged
+      damage: 2
+      crit: 5
+      range: Medium
+      qualities:
+        - Breach 1
+        - Stun Damage
+  power_levels:
+    combat: 6
+    social: 2
+    general: 3

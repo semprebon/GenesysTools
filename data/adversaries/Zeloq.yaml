@@ -31,15 +31,15 @@ talents:
   - Adversary 1
   - Coercive Sorcery
 actions:
-  - name: Spirit Guardians
+  Spirit Guardians:
     type: spell
     skill: Sorcery
     pool: "[PR][PR][PR][PR][DI][DI][DI]"
     range: encounter
     effect: "Summon 3 allied Angels of Retribution, which stay until the end
             of the encounter."
-  - name: Concussive Bolt
-    type: Attack
+  Concussive Bolt:
+    type: attack
     skill: Sorcery
     pool: "[PR][PR][PR][PR][DI][DI]"
     range: short
@@ -68,4 +68,6 @@ equipment:
   - Priests Vestments
   - Sword
   - Brigadine Armor
-silver: 150
+silver: 50
+image: Zeloq.jpg
+

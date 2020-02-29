@@ -1,3 +1,5 @@
+import os
+
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_RIGHT
 from reportlab.lib.styles import ParagraphStyle
@@ -17,6 +19,12 @@ class ItemCard:
     SECTION_HEADER_STYLE = ParagraphStyle("section_header", fontName="Helvetica", fontSize=9, leading=9, alignment=TA_CENTER)
     RIGHT_ALIGN_STYLE = ParagraphStyle("normal", fontName="Times-Roman", fontSize=9, leading=10, alignment=TA_RIGHT)
 
+    def __init__(self, setting, image_dir=os.getcwd(), size=None):
+        self.setting = setting
+        self.image_dir = image_dir
+        self.size = size
+        genesys_common.register_fonts()
+
     def title(self, item):
         #return [Paragraph(text, self.TITLE_STYLE)]
         table = Table([[Paragraph(item["name"], self.TITLE_STYLE),
@@ -30,7 +38,13 @@ class ItemCard:
         return [table, self.horizontal_line()]
 
     def features(self, data):
-        return [self.list_item(genesys_common.humanize(key), feature) for key, feature in data.items()]
+        if isinstance(data, list):
+            result = []
+            for item in data:
+                result.extend(self.features(item))
+            return result
+
+        return [ self.list_item(genesys_common.humanize(key), feature) for key, feature in data.items() ]
 
     def horizontal_line(self):
         return HRFlowable(width="100%", color=colors.black, hAlign="CENTER")
@@ -38,7 +52,12 @@ class ItemCard:
     def list_item(self, name, text):
         return Paragraph("<b>%s</b> %s" % (name, text), self.NORMAL_STYLE)
 
-    def card_face(self, item):
+    def display_image(self, image_name, size):
+        path = os.path.abspath(os.path.join(self.image_dir, image_name))
+        if os.path.isfile(path):
+            return genesys_common.get_image(path, max_size=size)
+
+    def card_face(self, item, content_size=[]):
         story = []
 
         if "name" in item:
@@ -55,5 +74,6 @@ class ItemCard:
         for type in types:
             if len(types) > 1:
                 story.append(Paragraph(genesys_common.humanize(type), self.SECTION_HEADER_STYLE))
-            story.extend(self.features(item[type]))
+            if type in item:
+                story.extend(self.features(item[type]))
         return story

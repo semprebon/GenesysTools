@@ -7,6 +7,15 @@ CHARACTERISTICS = [ 'BR', 'AG', 'INT', 'CUN', 'WILL', 'PR']
 def genesys_symbol(s, color="#000000"):
     return "<font name='Genesys' color='%s'>%s</font>" % (color, s)
 
+GENESYS_DICE = {
+    "boost":        ("j", "#72cddc"),
+    "ability":      ("k", "#02a652"),
+    "proficiency":  ("l",'#fff201'),
+    "setback":      ("j",'#000000'),
+    "difficulty":   ("k",'#6c2a84'),
+    "challenge":    ("l",'#7d1821')
+}
+
 SUCCESS_SYMBOL = genesys_symbol("s")
 FAILURE_SYMBOL = genesys_symbol("f")
 ADVANTAGE_SYMBOL = genesys_symbol("a")
@@ -24,6 +33,22 @@ CHALLENGE_SYMBOL = genesys_symbol("l",'#7d1821')
 COMBAT_SYMBOL = genesys_symbol("c")
 SOCIAL_SYMBOL = genesys_symbol("p")
 GENERAL_SYMBOL = genesys_symbol("g")
+
+SYMBOL_CODES = {
+    '[BO]': BOOST_SYMBOL,
+    '[SB]': SETBACK_SYMBOL,
+    '[AB]': ABILITY_SYMBOL,
+    '[DI]': DIFFICULTY_SYMBOL,
+    '[PR]': PROFICIENCY_SYMBOL,
+    '[CH]': CHALLENGE_SYMBOL,
+
+    '[SU]': SUCCESS_SYMBOL,
+    '[AD]': ADVANTAGE_SYMBOL,
+    '[TR]': TRIUMPH_SYMBOL,
+    '[FA]': FAILURE_SYMBOL,
+    '[TH]': THREAT_SYMBOL,
+    '[DE]': DESPAIR_SYMBOL,
+}
 
 def humanize(s):
     return s.replace("_", " ").title()
@@ -45,8 +70,8 @@ def resource_path(filename, root=None, directory="resources", ext=None):
             return os.path.abspath(path)
         if ext is not None:
             path = f"{path}.{ext}"
-            if os.path.isfile(path):
-                return os.path.abspath(path)
+        if os.path.isfile(path):
+            return os.path.abspath(path)
         root = os.path.dirname(root)
     raise FileNotFoundError(f"Resource not found: {filename}")
 
@@ -116,11 +141,40 @@ def register_fonts():
     register_font_family('C:\\Users\\Semprebon\\Appdata\\local\\microsoft\\windows\\fonts\\RobotoCondensed.ttf')
     register_font_family('C:\\Windows\\Fonts\\seguisym.ttf')
 
+
+def translate_symbols(s):
+    for code, sym in SYMBOL_CODES.items():
+        s = s.replace(code, sym)
+    return s
+
+
 def load_setting(files, root=__file__):
     setting_list = load_data(files, root=root)
-    setting = { 'skills': {}, 'archetypes': {}, 'careers': {}, 'talents': {}}
+    files = []
+    for setting in setting_list:
+        files.extend(setting.get("files", []))
+    if len(files) > 0:
+        setting_list.extend(load_data(files, root=root))
+
+    setting = { 'skills': {}, 'archetypes': {}, 'careers': {}, 'talents': {}, 'items': {} }
     for item in setting_list:
         for name, catagory in setting.items():
             if name in item:
                 catagory.update(item[name])
     return setting
+
+def scale_to_fit(image_size, space_size):
+    src_aspect = image_size[1] / float(image_size[0])
+    dest_aspect = space_size[1] / float(space_size[0])
+    if dest_aspect > src_aspect:
+        return [space_size[0], space_size[1] * src_aspect / dest_aspect]
+    else:
+        return [space_size[0] * dest_aspect / src_aspect, space_size[1]]
+
+def get_image(path, max_size):
+    from reportlab.platypus import Image
+    from reportlab.lib import utils
+    image = utils.ImageReader(path)
+    (w, h) = scale_to_fit(list(image.getSize()), max_size)
+    return Image(path, width=w, height=h)
+

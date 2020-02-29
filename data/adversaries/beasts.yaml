@@ -1,0 +1,142 @@
+# Common Beasts
+
+- name: Guard Dog
+  type: Rival
+  characteristics:
+    BR: 2
+    AG: 3
+    INT: 1
+    CUN: 3
+    WILL: 2
+    PR: 2
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics: 1
+    Brawl: 1
+    Charm: 1
+    Perception: 1
+    Survival: 1
+    Vigilance: 2
+  actions:
+    - name: Bite
+      type: attack
+      skill: Brawl
+      damage: 4
+      critical: 3
+      range: Engaged
+      qualities:
+        - Knockdown
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Stray Dog
+  type: Minion
+  characteristics:
+    BR: 2
+    AG: 3
+    INT: 1
+    CUN: 3
+    WILL: 2
+    PR: 2
+  soak_value: 2
+  wound_threshold: 5
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics: 1
+    Brawl: 1
+    Perception: 1
+    Survival: 1
+    Vigilance: 2
+  actions:
+    - name: Bite
+      type: attack
+      skill: Brawl
+      damage: 4
+      critical: 3
+      range: Engaged
+      qualities:
+        - Knockdown
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+- name: Cave Spider
+  type: Rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 3
+    CUN: 1
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 9
+  melee_defense: 0
+  ranged_defense: 0
+  skills:
+    Athletics:
+    Brawl:
+    Survival:
+    Vigilance:
+  abilities:
+    Skitter: "Can move across walls, ceilings, and webs without penalty"
+  actions:
+    - name: Venomous Bite
+      type: attack
+      skill: Brawl
+      damage: 2
+      critical: 3
+      range: Engaged
+      qualities:
+        - Disorient 4
+        - Burn 3
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
+
+# Venomous Snake
+- name: Venomous Snake
+  type: Rival
+  characteristics:
+    BR: 1
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 1
+  wound_threshold: 4
+  melee_defense: 0
+  ranged_defense: 2
+  silhouette: 0
+  skills:
+    Brawl: 2
+    Coercion: 2
+    Perception: 2
+    Survival: 2
+  abilities:
+    Neurotoxin: "If snake inflicts wounds, the target must make a Hard [DI][DI][DI]
+        resilience check or suffer 5 wounds, + 1 strain / [SB].
+        [DE] means they must make  a second Hard Resilience check at the start of
+        their next turn or take another 5 wounds."
+  actions:
+    - name: Bite
+      type: attack
+      skill: Brawl
+      damage: 2
+      critical: 5
+      range: Engaged
+      qualities:
+        - Pierce 2
+  power_levels:
+    combat: 1
+    social: 1
+    general: 1
