@@ -1,0 +1,89 @@
+- name: Witch Wraith
+  type: Rival
+  characteristics:
+    BR: 1
+    AG: 3
+    INT: 2
+    CUN: 3
+    WILL: 3
+    PR: 1
+  soak_value: 0
+  wound_threshold: 19
+  melee_defense: 3
+  ranged_defense: 3
+  silhouette: 1
+  skills:
+    Brawl: 3
+    Cool: 2
+    Discipline: 2
+    Witchcraft: 2
+  abilities:
+    Ghostly: "moves through terrain without penalty. 1/2 non-magic damage before
+        applying soak"
+    Terrifying: "At start of encounter, all opponents make [DI][DI][DI][DI] fear
+        check as out-of-turn incidental (pp 243)."
+    Undead: "Does not brathe, eat, or drink; can survive in vacuum or underwater;
+        immune to poisons and toxins"
+  actions:
+    Spectral Claws:
+      type: attack
+      skill: Brawl
+      damage: 2
+      crit: 1
+      range: Engaged
+      qualities:
+        - Breach 1
+        - Stun Damage
+    Wailing Cry:
+      type: attack
+      skill: Ranged
+      damage: 2
+      crit: 5
+      range: Medium
+      qualities:
+        - Breach 1
+        - Stun Damage
+  power_levels:
+    combat: 6
+    social: 2
+    general: 3
+
+- name: Ghost
+  type: Minion
+  characteristics:
+    BR: 1
+    AG: 2
+    INT: 2
+    CUN: 2
+    WILL: 3
+    PR: 2
+  soak_value: 0
+  wound_threshold: 6
+  melee_defense: 2
+  ranged_defense: 2
+  silhouette: 1
+  skills:
+    Brawl:
+    Cool:
+    Discipline:
+  abilities:
+    Ghostly: "moves through terrain without penalty. 1/2 non-magic damage before
+        applying soak"
+    Terrifying: "At start of encounter, all opponents make [DI][DI] fear
+        check as out-of-turn incidental (pp 243)."
+    Undead: "Does not breath, eat, or drink; can survive in vacuum or underwater;
+        immune to poisons and toxins"
+  actions:
+    Life Drain:
+      type: attack
+      skill: Brawl
+      damage: 1
+      crit: 2
+      range: Engaged
+      qualities:
+        - Breach 1
+        - Stun Damage
+  power_levels:
+    combat: 2
+    social: 2
+    general: 1
