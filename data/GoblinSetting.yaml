@@ -1,0 +1,245 @@
+files:
+  - items\weapons
+  - items\armor
+  - items\gear
+  - items\implements
+  - items\concoctions
+skills:
+  Athletics:
+    characteristic: BR
+    ref: 58
+    type: general
+  Brawl:
+    characteristic: BR
+    ref: 67
+    type: combat
+  Charm:
+    characteristic: PR
+    ref: 54
+    type: social
+  Coercion:
+    characteristic: WILL
+    ref: 55
+    type: social
+  Cool:
+    characteristic: PR
+    ref: 59
+    type: general
+  Coordination:
+    characteristic: AG
+    ref: 59
+    type: general
+  Deception:
+    characteristic: CUN
+    ref: 56
+    type: social
+  Discipline:
+    characteristic: WILL
+    ref: 60
+    type: general
+  Knowledge (Nature):
+    characteristic: INT
+    ref: Goblins
+    type: knowledge
+  Knowledge (Occult):
+    characteristic: INT
+    ref: Goblins
+    type: knowledge
+  Knowledge (History):
+    characteristic: INT
+    ref: Goblins
+    type: knowledge
+  Leadership:
+    characteristic: PR
+    ref: 56
+    type: social
+  Mechanics:
+    characteristic: INT
+    ref: 61
+    type: general
+  Medicine:
+    characteristic: INT
+    ref: 61
+    type: general
+  Melee (Heavy):
+    characteristic: BR
+    ref: 68
+    type: combat
+  Melee (Light):
+    characteristic: BR
+    ref: 68
+    type: combat
+  Negotiation:
+    characteristic: PR
+    ref: 56
+    type: social
+  Operating:
+    characteristic: INT
+    ref: 62
+    type: general
+  Perception:
+    characteristic: CUN
+    ref: 62
+    type: general
+  Ranged:
+    characteristic: AG
+    ref: 68
+    type: combat
+  Resilience:
+    characteristic: BR
+    ref: 63
+    type: general
+  Riding:
+    characteristic: AG
+    ref: 63
+    type: general
+  Skulduggery:
+    characteristic: CUN
+    ref: 64
+    type: general
+  Stealth:
+    characteristic: AG
+    ref: 64
+    type: general
+  Streetwise:
+    characteristic: CUN
+    ref: 65
+    type: general
+  Survival (Dungeon):
+    characteristic: CUN
+    ref: 65
+    type: general
+  Survival (Wilderness):
+    characteristic: CUN
+    ref: 69
+    type: general
+  Vigilance:
+    characteristic: WILL
+    ref: 65
+    type: general
+
+archetypes:
+  Goblin:
+    characteristics:
+      brawn: 1
+      agilty: 3
+      intellect: 1
+      cunning: 2
+      willpower: 2
+      presence: 1
+    wound_threshold: 10
+    strain_threshold: 10
+    experience: 90
+    "Nomad’s Dodge": "Once per session your character may spend a Story Point as an out-of-turn incidental to add [SD] to a
+     melee or ranged attack against them."
+
+careers:
+  Hunter:
+    skills:
+      - Ranged
+      - Perception
+      - Survival (Wilderness)
+      - Vigilance
+      - Discipline
+      - Athletics
+      - Medicine
+      - Knowledge (Nature)
+  Scout:
+    skills:
+      - Melee (light)
+      - Ranged
+      - Perception
+      - Cool
+      - Skullduggery
+      - Coordination
+      - Deception
+      - Survival (Dungeon)
+
+talents:
+  Adversary:
+    tier: 1
+    activation: passive
+    ranked: true
+    description: "Combat attacks against character upgrade difficulty by rank."
+  Coercive Sorcery:
+    tier: 1
+    activation: passive
+    ranked: false
+    description: "Use Coercion instead of Charm as the knowledge skill for Sorcery."
+  Quick Draw:
+    tier: 1
+    activation: Active (Incidental)
+    ranked: false
+    description: "On your turn you may draw an easily accessible weapon as an
+        incidental. Quick Draw also reduces a weapon's Prepare rating by one,
+        to a minimum of one."
+  Parry:
+    tier: 1
+    activation: Active (Incidental)
+    ranked: true
+    description: "When hit in melee and wielding melee weapon, before soak, incidental to suffer 3 strain to
+      reduce damage by 2 + rank."
+  Improved Parry:
+    tier: 3
+    activation: Active (Incidental)
+    ranked: false
+    description: "After using parry and attack resolved, spend [TH][TH][TH][TH]
+      or [DI] to automatically hit attacker with Brawl or wielded weapon."
+  Toughened:
+    tier: 1
+    activation: Passive
+    ranked: true
+    description: "Each rank of Toughened increases your wound threshhold by 2."
+  Hamstring Shot:
+    tier: 1
+    activation: action
+    ranked: false
+    description: "Once per round, perform ranged combat check; if successful, do half damage and target is immobilized
+      until the end of its next turn."
+  Duelist:
+    tier: 1
+    activation: Passive
+    ranked: false
+    description: "Add [BO] to melee combat checks while engaged with 1 foe. Add [SB] to melee combat checks
+      while engaged with 3+ foes"
+  Lucky Strike (Brawn):
+    tier: 2
+    activation: Incidental
+    ranked: false
+    description: "After a successful combat check, spend a Story Point to add damage equal to your ranks in Brawn to
+      one hit"
+  Lucky Strike (Agility):
+    tier: 2
+    activation: Incidental
+    ranked: false
+    description: "After a successful combat check, spend a Story Point to add damage equal to your ranks in Agility to
+      one hit"
+  Heightened Awareness:
+    tier: 2
+    activation: Passive
+    Ranked: false
+    description: "Allies within short range add [BO] to Perception and Vigilance checks. Allies engaged add [BO][BO]."
+  Parry Improved:
+    tier: 3
+    activation: Incidental
+    Ranked: false
+    description: "When hit from melee attack, after attack is resolved, spend [DE] or [SB][SB][SB] to automatically
+      hit the target with a brawl or melee weapon"
+  Rapid Reaction:
+    tier: 1
+    activation: Incidental
+    ranked: true
+    description: "Suffer strain to add an equal number of [SU] to an initiative check. The number may not exeed the
+        rank"
+  Rapid Archery:
+    tier: 3
+    activation: Manuever
+    ranked: false
+    description: "When armed with a bow, suffer 2 strain, and your next ranged combat check with a bow gains
+      the Linked quality with a value equal to your ranks in Ranged"
+  One With Nature:
+    tier: 1
+    activation: Incidental
+    ranked: false
+    description: "When  in the wilderness, make a simple Survival check instead of Discipline or Cool to recover strain
+      at the end of an encounter"

@@ -1,0 +1,47 @@
+- name: Wrath of Five
+  type: Nemesis
+  characteristics:
+    BR: 4
+    AG: 3
+    INT: 2
+    CUN: 3
+    WILL: 3
+    PR: 1
+  soak_value: 5
+  wound_threshold: 13
+  strain_threshold: 13
+  melee_defense: 0
+  ranged_defense: 0
+  silhouette: 2
+  skills:
+    Brawl: 3
+    Resilience: 3
+    Vigilance: 2
+  abilities:
+    Ghostly: "moves through terrain without penalty. 1/2 non-magic damage before
+        applying soak"
+    Terrifying: "At start of encounter, all opponents make [DI][DI][DI] fear
+        check as out-of-turn incidental (pp 243)."
+    Undead: "Does not brathe, eat, or drink; can survive in vacuum or underwater;
+        immune to poisons and toxins"
+  actions:
+    Spectral Bite:
+      type: attack
+      action: attack
+      skill: Brawl
+      damage: 6
+      range: engaged
+      qualities:
+        - Vicious
+    Wailing Cry:
+      type: attack
+      skill: Ranged
+      damage: 4
+      range: Medium
+      qualities:
+        - Stun Damage 3
+        - Blast 3
+  power_levels:
+    combat: 6
+    social: 1
+    general: 1

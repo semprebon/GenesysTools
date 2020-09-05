@@ -1,0 +1,71 @@
+name: Golem Varaan
+setting: BadaarSetting
+type: rival
+archetype: Know-It-All
+career: Academy Wizard
+player: NPC
+faction: Raazalkabesh
+wound_threshold: 15
+soak_value: 6
+melee_defense: 3
+ranged_defense: 2
+characteristics:
+  BR: 4
+  AG: 2
+  INT: 4
+  CUN: 3
+  WILL: 3
+  PR: 2
+skills:
+  Alchemy: 3
+  Coercion: 3
+  Perception: 3
+  Sorcery: 3
+  Thaumaturgy: 4
+talents:
+  - Adversary 1
+  - Coercive Sorcery
+abilities:
+  Strength of Iron: "can wield a Melee [Heavy] weapon in one hand"
+actions:
+  Flame Spirit:
+    type: spell
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI][DI]"
+    range: short
+    effect: "Summon 1 hostile Flame Spirit."
+  Magic Missile:
+    type: attack
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI]"
+    range: short
+    damage: 4
+  Shield of Force:
+    type: spell
+    skill: Thaumaturgy
+    pool: "[PR][PR][PR][AB][DI][DI]"
+    range: engaged
+    effect: "Reduce damage by 1 + 1 for every [SU][SU]; add +3 to Defense"
+motivation:
+  desire:
+    name: Knowledge
+    text: "If only I can recover the ancient secrets of immortality, I can survive
+        death itself."
+  fear:
+    name: Death
+    text: "If I never die, I can not be punished by the fires of hell."
+  strength:
+    name: Adaptable
+    text: "Survival is a matter of having the right toolkit of skills
+        and powers for whatever life may throw at you."
+  flaw:
+    name: Pride
+    text: "If anyone can do this, I can."
+equipment:
+    Halberd: Halberd
+    silver: 15
+image: Varaan.jpg
+power_levels:
+    combat: 6
+    social: 1
+    general: 1

@@ -11,7 +11,7 @@ import card_page_layout
 from pdf_generator import PDFGenerator
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--type", "-t", choices=['i', 'a', 's'], default="a",
+parser.add_argument("--type", "-t", choices=['i', 'a', 's', 'c'], default="a",
                     help="type of file (i=item, a=adversary, s=spell)")
 parser.add_argument("--setting", "-s", default="BadaarSetting", help="setting yaml file")
 parser.add_argument("--width", default="2.5", help="width", type=float)
@@ -30,7 +30,7 @@ card_size = [args.width*inch, args.height*inch]
 if args.type == "i":
     import item_card
     data = genesys_common.load_data(args.files)
-    card = item_card.ItemCard()
+    card = item_card.ItemCard(setting)
     layout = card_page_layout.CardPageLayout(
         card_size=card_size, page_size=[8.5*inch, 11*inch],
         gutter=0*inch,
@@ -41,10 +41,21 @@ elif args.type == "a":
     data = genesys_common.load_data(args.files)
     card = adversary_card.AdversaryCard(setting, args.imagedir, size=card_size)
     layout = card_page_layout.CardPageLayout(
-        #card_size=card_size, page_size=[8.5*inch, 11*inch],
-        card_size=card_size, page_size=[11*inch, 8.5*inch],
+        card_size=card_size, page_size=[8.5*inch, 11*inch],
+        #card_size=card_size, page_size=[11*inch, 8.5*inch],
         gutter=0*inch,
         page_margin=0.25*inch)
+elif args.type == "c":
+    # data_file = genesys_common.data_filename(sys.argv, default_filename="test_adversaries")
+    import character_sheet
+
+    data = genesys_common.load_data(args.files)
+    card = character_sheet.CharacterSheet(setting, args.imagedir, size=card_size)
+    layout = card_page_layout.CardPageLayout(
+        card_size=card_size, page_size=[11 * inch, 8.5 * inch],
+        # card_size=card_size, page_size=[11*inch, 8.5*inch],
+        gutter=0 * inch,
+        page_margin=0.25 * inch)
 elif args.type == "s":
     import spell_card
     data = []
@@ -54,6 +65,7 @@ elif args.type == "s":
     card = spell_card.SpellCard(setting, size=card_size)
     layout = card_page_layout.CardPageLayout(
         card_size=card_size, page_size=[8.5*inch, 11*inch],
+#        card_size=card_size, page_size=[11*inch, 8.5*inch],
         gutter=0*inch,
         page_margin=0.25*inch)
 

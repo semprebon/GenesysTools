@@ -1,0 +1,62 @@
+#Brex
+name: Brex
+setting: GoblinSetting
+archetype: Goblin
+career: Scout
+player: NPC
+xp:
+  starting: 90
+  earned: 110
+  spent: 95
+soak_value: 5
+melee_defense: 2
+ranged_defense: 1
+wound_threshold: 16
+wounds: 4
+strain_threshold: 14
+strain: 5
+characteristics:
+  BR: 4
+  AG: 3
+  INT: 1
+  CUN: 2
+  WILL: 2
+  PR: 1
+skills:
+  Melee (Light): 3
+  Stealth: 1
+  Ranged: 2
+  Survival (Dungeon): 2
+  Perception: 1
+  Skulduggery: 2
+talents:
+  # Tier 1
+  - Toughened 1
+  - Duelist
+  - Parry 1
+  # Tier 2
+  - Toughened 2
+  - Lucky Strike (Brawn)
+  # Tier 3
+  - Parry Improved
+abilities:
+  Slippery Bastard: "once per encounter, Goblin can evade one successful melee or ranged attack but must add [SB][SB]
+    to the next skill check"
+equipment:
+#Equipment: studded leather armor (def. 1; soak 1; enc. 2); sling (ranged; medium; dam. 3, crit.
+#5, enc. 1); long dagger (dam. +2, crit. 3, pierce 1, enc. 1), thieves’ tools (enc. 1), backpack enc.
+#+4), 2 small gems
+# Jeq's Sword of Dinosaur Slaying
+  #Damage +3
+  #Defensive 1
+  #Encum 1
+  #Crit 2
+  - Goblin Sling
+  - Small Gems x 7
+  - Long Dagger
+  - Thieves Tools
+  - Backpack
+  - Goblin Studded Leather Armor
+  - Shield
+  - Ancient Long Bow
+image: 'C:\\Users\\Semprebon\Projects\\GenesysTools\\resources\\images\\Brex.jpg'

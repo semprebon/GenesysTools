@@ -1,0 +1,56 @@
+name: Gaath el Siq
+setting: BaldaariSetting
+type: nemesis
+career: Leader
+player: NPC
+soak_value: 2
+melee_defense: 0
+ranged_defense: 0
+wound_threshold: 14
+strain_threshold: 17
+characteristics:
+  BR: 2
+  AG: 4
+  INT: 4
+  CUN: 2
+  WILL: 2
+  PR: 3
+skills:
+  Ranged: 4
+  Charm: 4
+  Coercion: 5
+  Cool: 2
+  Discipline: 2
+  Leadership: 3
+  Negotiation: 5
+  Vigilance: 1
+talents:
+  Adversary: 2
+motivation:
+  desire:
+    name: Ambition
+    text: "Sabir hopes to influence the el-Siq family to great power"
+  fear:
+    name: Obscurity
+    text: "Sabir resents how witches are treated as second class citizens."
+  strength:
+    name: Adaptable
+    text: "Sabir is good at turning failures into future successes."
+  flaw:
+    name: Pride
+    text: "Sabir thinks very highly of her own abilities, and resents those who are better/"
+equipment:
+  - Tome of the Cursed:
+      type: implement
+      encumbrance: 1
+      rarity: 7
+      price: 350
+      description: "A black book that smells of putrescence, bound in unusual leather."
+      implement:
+        effect: "Adds Additional Targets and Increased Range effects at no additional cost."
+  - Heavy Robes (defense 1)
+  - Daggers of Bizaan
+power_levels:
+  combat: 3
+  social: 6
+  general: 3

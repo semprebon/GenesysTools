@@ -1,0 +1,38 @@
+- name: Daggers of Bizaan (Melee)
+  description: "small but very sharp daggers well balanced for throwing. May be thrown with
+      range: short"
+  type: weapon
+  encumbrance: 1
+  rarity: 9
+  mp: 1
+  weapon:
+    skill: Melee (Light)
+    damage: +3
+    crit: 3
+    range: Enganged
+    qualities:
+      - Accurate 1
+      - Superior
+      - Pierce 2
+- name: Blade of the Undying
+  type: implement/weapon
+  encumbrance: 1
+  rarity: 7
+  description: "A rune-covered dagger carved from a single piece of black obsidian.
+      In the translucent material, shadows appear to roam at random, and those who
+      hold it for more than a few minutes here faint whispers, becoming screams as
+      the dagger strikes."
+  implement:
+    effect: "Any attack spell using this blade adds the close combat
+      effect without increasing the difficulty of the check. An attack
+      spell cast at a target engaged with the user increases its base damage by +3,
+      and if the user is undead, heals the user for half the damage equal to that
+      taken by the target."
+  weapon:
+    skill: Melee (Light)
+    damage: +3
+    crit: 3
+    range: Enganged
+    qualities:
+      - Disorient 2
+      - Stun 3

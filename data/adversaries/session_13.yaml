@@ -1,0 +1,86 @@
+- name: Skeleton Guard
+  type: minion
+  characteristics:
+    BR: 2
+    AG: 2
+    INT: 1
+    CUN: 2
+    WILL: 1
+    PR: 1
+  soak_value: 2
+  wound_threshold: 4
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    - Perception
+    - Ranged
+    - Melee (Heavy)
+    - Vigilance
+  equipment:
+    - Spear
+    - Bow
+    - Leather Armor
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1
+
+- name: Raazalkabesh Mercenary Sargent
+  type: Rival
+  characteristics:
+    BR: 3
+    AG: 2
+    INT: 2
+    CUN: 2
+    WILL: 2
+    PR: 2
+  soak_value: 5
+  wound_threshold: 11
+  melee_defense: 1
+  ranged_defense: 1
+  skills:
+    Athletics: 2
+    Discipline: 1
+    Melee (Light): 2
+    Ranged: 2
+    Vigilance: 2
+  equipment:
+    - Brigandine Armor
+    - Sword
+    - Crossbow
+  power_levels:
+    combat: 2
+    social: 1
+    general: 1
+
+- name: Automaton Assassins
+  type: Rival
+  characteristics:
+    BR: 2
+    AG: 1
+    INT: 2
+    CUN: 3
+    WILL: 3
+    PR: 2
+  soak_value: 5
+  wound_threshold: 15
+  melee_defense: 1
+  ranged_defense: 0
+  skills:
+    Melee (Light): 3
+    Ranged: 3
+    Resilience: 3
+    Vigilance: 2
+  talents:
+    - Quick Draw
+  abilities:
+    Poison Daggers: "The daggers the assassin throws are poisoned:
+      Hard ([DI][DI][DI]) Resilience check or suffer 4 wounds (no soak) + 1 strain
+       per [SB]"
+  equipment:
+    - Sword
+    - Dagger
+  power_levels:
+    combat: 4
+    social: 1
+    general: 1

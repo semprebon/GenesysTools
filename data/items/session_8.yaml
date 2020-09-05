@@ -1,0 +1,22 @@
+- name: Fishscale Scimitar (Melee)
+  description: "An ancient bronze-colored scimitar with faint fishscale pattern in the metal"
+  type: weapon
+  encumbrance: 1
+  rarity: 10
+  mp: 0
+  weapon:
+    skill: Melee (Light)
+    damage: +4
+    crit: 1
+    range: Enganged
+    qualities:
+      - Defensive 1
+      - Reinforced
+- name: Gloves of Spiderclimb
+  type: clothing
+  encumbrance: 1
+  rarity: 7
+  description: "Soft silk gloves that feel a bit tacky."
+  clothing:
+    effect: "Anyone wearing the gloves has ther Skitter special ability: They cam move
+      across walls, ceilings, and giant spider webs without penalty."

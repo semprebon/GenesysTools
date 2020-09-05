@@ -122,6 +122,31 @@ items:
         - Defensive 1
         - Pierce 3
 
+  Long Dagger:
+    type: weapon
+    encumbrance: 1
+    rarity: 1
+    mp: 1
+    price: 60
+    actions:
+      Stab:
+        type: attack
+        skill: Melee (Light)
+        damage: +2
+        crit: 3
+        range: Enganged
+        qualities:
+          - Pierce 1
+      Throw:
+        type: attack
+        skill: Ranged
+        damage: +2
+        crit: 3
+        range: Short
+        qualities:
+          - Accurate 1
+          - Limited Ammo 1
+
   Mace:
     type: weapon
     encumbrance: 2
@@ -306,6 +331,50 @@ items:
       qualities:
         - Unwieldy 2
 
+  Short Bow:
+    type: weapon
+    encumbrance: 1
+    mp: 1
+    price: 275
+    rarity: 2
+    action:
+      type: attack
+      skill: Ranged
+      damage: 4
+      crit: 4
+      range: Medium
+      qualities:
+        - Accurate 1
+
+  Ancient Long Bow:
+    type: weapon
+    encumbrance: 1
+    mp: 1
+    price: 275
+    rarity: 2
+    action:
+      type: attack
+      skill: Ranged
+      damage: 4
+      crit: 4
+      range: Long
+
+  Bow of the True Hunter:
+    type: weapon
+    encumbrance: 1
+    mp: 1
+    rarity: 2
+    action:
+      type: attack
+      skill: Ranged
+      damage: 6
+      crit: 3
+      range: Long
+      qualities:
+        - Accurate 1
+    description:
+      "All attacks count as magical; 3 times/day, spend [AD][AD] to trigger Ensnare on size 2 or smaller"
+
   Longbow:
     type: weapon
     encumbrance: 3
@@ -385,6 +454,19 @@ items:
       qualities:
         - Disorient 2
         - Prepare 1
+
+  Goblin Sling:
+    type: weapon
+    encumbrance: 1
+    mp: 0
+    price: 20
+    rarity: 0
+    action:
+      type: attack
+      skill: Ranged
+      damage: 3
+      crit: 5
+      range: Medium
 
   Throwing Axe:
     type: weapon

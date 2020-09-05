@@ -17,6 +17,8 @@ class CardPageLayout:
 
         (x_offset, columns) = self.fit_cards(page_size[0], card_size[0], self.gutter[0], self.page_margin[0])
         (y_offset, rows) = self.fit_cards(page_size[1], card_size[1], self.gutter[1], self.page_margin[1])
+        print(f"page size: {page_size}")
+        print(f"columns: {columns}; rows: {rows}")
         self.initial_offset = [x_offset, y_offset]
         self.counts = [columns, rows]
         self.cards_per_page = columns * rows

@@ -1,0 +1,90 @@
+name: Kalethra the Undying
+setting: BaldaariSetting
+type: nemesis
+career: Witch
+player: NPC
+soak_value: 6
+melee_defense: 0
+ranged_defense: 0
+wound_threshold: 18
+strain_threshold: 20
+characteristics:
+  BR: 4
+  AG: 5
+  INT: 4
+  CUN: 4
+  WILL: 4
+  PR: 4
+skills:
+  Brawl: 2
+  Charm: 3
+  Cool: 3
+  Discipline: 3
+  Deception: 2
+  Coercion: 3
+  Medicine: 5
+  Stealth: 3
+  Sorcery: 1
+  Thaumaturgy: 2
+  Vigilance: 2
+  Witchcraft: 4
+talents:
+  Adversary: 2
+abilities:
+  Terrifying: "At start of encounter, all opponents make [DI][DI][DI][DI] fear check (GCR p. 243)"
+  Undead: ""
+actions:
+  Blood Funnel:
+    type: attack
+    action: attack
+    skill: Witchcraft
+    effect: "Blood errupts from the target, and possible affects the same condition in engaged targets."
+    difficulty: 3
+    range: medium
+    damage: 8
+    crit: 2
+    qualities:
+      - Blast 5
+      - Vicious 5
+  Curse of the Night:
+    type: spell
+    action: curse
+    skill: Witchcraft
+    effect: "The target's skill checks are reduced by 1 and their strain and would thresholds are 4."
+    difficulty: 3
+    pool: "[PR][PR][PR][PR][AB][DI][DI][DI]"
+    range: short
+  Semblance of the Crow:
+    type: spell
+    action: other
+    skill: Witchcraft
+    effect: "The witch transforms themselves into a crow until the spell ends.
+      The character keeps their skills, talents, and strain threshold.
+      They drop anything worn or carried when they transformed.
+      If incapacitated, they revert to their normal form. When returning to
+      their normal form, they heal all wounds suffered while a crow,  but keep
+       any strain or Critical Injuries. If incapacitated by wounds
+       they are no longer incapacitated."
+    difficulty: 2
+    pool: "[PR][PR][PR][PR][AB][DI][DI]"
+    range: self
+    concentration: true
+motivation:
+  desire:
+    name: Ambition
+    text: "Kalethra wants to have power over Badaar."
+  fear:
+    name: Death
+    text: "Kalethra will do anythng to avoid dying."
+  strength:
+    name: Adaptable
+    text: "Kalethra knows when his efforts aren't yielding results, and is willing to try new approaches."
+  flaw:
+    name: Recklessness
+    text: "Kalethra often takes risks if the gains are worth it"
+equipment:
+  - Blade of the Undying
+power_levels:
+  combat: 11
+  social: 5
+  general: 7

@@ -88,4 +88,13 @@
     effect: "Attack spells increase their base damage by 3, add the Stun quaility at a rating equal to the character's
       ranks in the associated knowledge skill, and add the Auto-Fire quality."
 
+- name: Scepter of Wand of Lightning
+  type: implement
+  encumbrance: 1
+  rarity: 5
+  price: 400
+  description: "A small stick, usually made of wood or bone"
+  implement:
+    effect: "Attack spells increase their base damage by 3, add the Stun quaility at a rating equal to the character's
+      ranks in the associated knowledge skill, and add the Auto-Fire quality."
 

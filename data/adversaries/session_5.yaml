@@ -25,15 +25,15 @@
     Undead: "Does not brathe, eat, or drink; can survive in vacuum or underwater;
         immune to poisons and toxins"
   actions:
-    Spectral Claws:
+    Flaying the Damned:
       type: attack
-      skill: Brawl
-      damage: 2
-      crit: 1
-      range: Engaged
-      qualities:
-        - Breach 1
-        - Stun Damage
+      action: attack
+      skill: Witchcraft
+      effect: "The target's skin starts pealing off as if it were flayed
+          by a whip."
+      difficulty: 1
+      damage: 4
+      range: medium
     Wailing Cry:
       type: attack
       skill: Ranged
@@ -87,3 +87,40 @@
     combat: 2
     social: 2
     general: 1
+
+- name: Maanu Khan - Inquisitor Wight
+  type: Nemesis
+  characteristics:
+    BR: 3
+    AG: 3
+    INT: 2
+    CUN: 3
+    WILL: 3
+    PR: 1
+  soak_value: 5
+  wound_threshold: 20
+  strain threshold: 14
+  melee_defense: 1
+  ranged_defense: 0
+  silhouette: 1
+  skills:
+    Cool: 2
+    Discipline: 3
+    Melee (Heavy): 3
+    Melee (Light): 3
+    Resilience: 2
+  talents:
+    - Adversary 1
+    - Parry
+    - Improved Parry
+  abilities:
+    Terrifying: "At start of encounter, all opponents make [DI][DI][DI][DI] fear
+        check as out-of-turn incidental (pp 243)."
+    Undead: "The usual"
+  equipment:
+    - Flail
+    - Battered Armor
+  power_levels:
+    combat: 8
+    social: 2
+    general: 3

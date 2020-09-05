@@ -25,6 +25,7 @@
   mp: 1
   price: 45
   rarity: 0
+
 - name: Leather Armor
   type: armor
   armor:
@@ -34,6 +35,7 @@
   mp: 1
   price: 50
   rarity: 3
+
 - name: Heavy Robes
   type: armor
   armor:
@@ -52,6 +54,17 @@
   mp: 1
   price: 50
   rarity: 3
+
+- name: Goblin Studded Leather Armor
+  type: armor
+  armor:
+    defense: 1
+    soak: +1
+  encumbrance: 2
+  mp: 1
+  price: 50
+  rarity: 3
+
 - name: Padded Armor
   type: armor
   armor:

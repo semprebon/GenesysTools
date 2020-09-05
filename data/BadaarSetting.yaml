@@ -4,6 +4,7 @@ files:
   - items\gear
   - items\implements
   - items\concoctions
+  - items\session_6
 skills:
   Alchemy:
     characteristic: INT
@@ -218,6 +219,18 @@ talents:
     description: "On your turn you may draw an easily accessible weapon as an
         incidental.Quick Draw also reduces a weapon's Prepare rating by one,
         to a minimum of one."
+  Parry:
+    tier: 1
+    activation: Active (Incidental)
+    ranked: false
+    description: "When hit in meleea and wielding melee weapon, before soak, incidental to suffer 3 strain to
+      reduce damage by 5."
+  Improved Parry:
+    tier: 3
+    activation: Active (Incidental)
+    ranked: false
+    description: "After using parry and attack resolved, spend [TH][TH][TH][TH]
+      or [DI] to automatically hit attacker with Brawl or wielded weapon."
 
 
 

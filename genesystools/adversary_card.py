@@ -8,6 +8,8 @@ from reportlab.platypus import Paragraph, HRFlowable, Table, TableStyle, Image
 
 import genesys_common
 
+SHOW_ALL_SKILLS = True
+
 # Defines what is appearing on each card.
 class AdversaryCard:
     from genesys_common import translate_symbols
@@ -89,7 +91,7 @@ class AdversaryCard:
         table = Table([
             [ data['characteristics'][char] for char in genesys_common.CHARACTERISTICS ],
             [ "%s" % char for char in genesys_common.CHARACTERISTICS ]],
-        colWidths=[0.366*inch])
+            colWidths=[0.366*inch])
         table.setStyle(TableStyle([
             # values
             ('BACKGROUND',      (0,0), (-1,0), self.LIGHT),
@@ -162,11 +164,23 @@ class AdversaryCard:
             print("Key error in {data}: {err}")
             return f"Invalid skill: {data}: {err}"
 
+    def resolved_skill(self, name, rank, data, setting):
+        skill = self.resolve_with_setting(name, 'skills')
+        try:
+            characteristic = skill['characteristic']
+            characteristic_rank = data['characteristics'][characteristic]
+            pool = self.dice_pool(characteristic_rank, rank)
+            rank_str = ("" if rank == None else f"&nbsp;{rank}")
+            return [Paragraph(f"{name} ({characteristic})", self.NORMAL_STYLE), rank, Paragraph(pool, self.NORMAL_STYLE)]
+        except KeyError as err:
+            print("Key error in {data}: {err}")
+            return f"Invalid skill: {data}: {err}"
+
     def resolve_with_setting(self, name, types, setting=None):
         setting = self.setting if setting == None else setting
         thing = setting[types].get(name)
         if thing == None:
-            raise ValueError(f"{name} not found in setting {types}")
+            raise ValueError(f"{name} not found in setting {types} ({setting['skills']})")
         return thing
 
     def label(self, text, color=MIDTONE):
@@ -177,8 +191,25 @@ class AdversaryCard:
         skills = data.get('skills', {})
         if isinstance(skills, list):
             skills = { name: None for name in skills }
+        if SHOW_ALL_SKILLS:
+            skills.update({ name: 0 for name, info in setting['skills'].items() if name not in skills})
+
         skills_str = "; ".join([ self.format_skill(name, rank, data, setting) for name, rank in skills.items() ])
+
         return Paragraph(skills_str, self.INVERSE_STYLE)
+
+    def extended_skills(self, data, setting):
+        skills = data.get('skills', {})
+        if isinstance(skills, list):
+            skills = { name: None for name in skills }
+        if SHOW_ALL_SKILLS:
+            skills.update({ name: 0 for name, info in setting['skills'].items() if name not in skills})
+
+        skills_table = Table([ self.resolved_skill(name, rank, data, setting) for name, rank in skills.items() ],
+                             [2.0*inch, 0.5*inch, 0.8*inch], 0.15*inch )
+        #skills_table.setStyle()
+
+        return skills_table
 
     def format_ability(self, name, description):
         name_str = f"<font color='{self.CONTRAST}'><b>{name}</b></font>"
@@ -307,6 +338,10 @@ class AdversaryCard:
             actions.append(action)
         return actions
 
+    def motivations(self, motivations):
+        return [
+            Paragraph(self.format_ability(f"{type}: {motivation['name']}", motivation['text']), self.NORMAL_STYLE)  for (type, motivation) in motivations.items() ]
+
     def card_face(self, adversary, content_size=[]):
         story = []
 
@@ -315,7 +350,8 @@ class AdversaryCard:
             story.append(self.title(adversary))
         story.append(self.characteristics(adversary))
         story.append(self.defenses(adversary))
-        story.append(self.skills(adversary, self.setting))
+        #story.append(self.skills(adversary, self.setting))
+        story.append(self.extended_skills(adversary, self.setting))
         features = adversary.get('abilities', {})
         features.update(self.talents_to_abilities(adversary.get('talents')))
         if not len(features) == 0:
@@ -352,5 +388,10 @@ class AdversaryCard:
         #     from reportlab.platypus import FrameBreak
         #     story.append(FrameBreak())
         #     story.append(self.display_image(adversary['image'], content_size))
+
+        if 'motivation' in adversary:
+            story.append(self.horizontal_line())
+            for motivation in self.motivations(adversary['motivation']):
+                story.append(motivation);
 
         return story
