@@ -190,6 +190,11 @@ talents:
     activation: Passive
     ranked: true
     description: "Each rank of Toughened increases your wound threshhold by 2."
+  Grit:
+    tier: 1
+    activation: Passive
+    ranked: true
+    description: "Each rank of Grit increases your stress threshhold by 1."
   Hamstring Shot:
     tier: 1
     activation: action
@@ -243,3 +248,21 @@ talents:
     ranked: false
     description: "When  in the wilderness, make a simple Survival check instead of Discipline or Cool to recover strain
       at the end of an encounter"
+  Precise Archery:
+    tier: 3
+    activation: Passive
+    ranked: false
+    description: "When making a Ranged combat check targeting a character engaged with one of your character's allies,
+      downgrade the difficulty of the check once (thus negating the penalty for shooting at engaged targets)."
+  Precise Archery:
+    tier: 3
+    activation: Passive
+    ranked: false
+    description: "When making a Ranged combat check targeting a character engaged with one of your character's allies,
+      downgrade the difficulty of the check once (thus negating the penalty for shooting at engaged targets)."
+  Deadeye:
+    tier: 4
+    activation: Incidental
+    ranked: false
+    description: "After rolling a Critical Injury result from a ranged weapon, take 2 strain to select any Critical
+      Injury of the same severity instead"

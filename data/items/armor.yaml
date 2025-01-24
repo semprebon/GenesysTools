@@ -74,6 +74,12 @@
   mp: 0
   price: 35
   rarity: 2
+
+- name: Light demonic mail
+  type: armor
+  armor:
+    soak: +2
+    deflection: +1
 #- name: Plate Armor
 #  type: armor
 #  armor:
